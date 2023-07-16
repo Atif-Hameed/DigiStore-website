@@ -1,0 +1,68 @@
+.banner-img{
+    background-image: url('../../asset/img1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+
+
+@font-face {
+    font-family: 'aeonik-regbold';
+    src: url('../../asset/Font/Aeonik-/Aeonik-Regular.otf') format('opentype');
+  }
+@font-face {
+    font-family: 'aeonik-reg';
+    src: url('../../asset/Font/Aeonik-/Aeonik-Medium.otf') format('opentype');
+  }
+@font-face {
+    font-family: 'aeonik-reg-bold';
+    src: url('../../asset/Font/Aeonik-/Aeonik-Medium.otf') format('opentype');
+    font-weight: bold;
+  }
+
+
+
+@font-face {
+    font-family: 'aeonik';
+    src: url('../../asset/Font/NewAeonik/AeonikTRIAL-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'aeonik';
+    src: url('../../asset/Font/NewAeonik/AeonikTRIAL-BoldItalic.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  @font-face {
+    font-family: 'aeonik';
+    src: url('../../asset/Font/NewAeonik/AeonikTRIAL-Light.otf') format('opentype');
+    font-weight: lighter;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'aeonik';
+    src: url('../../asset/Font/NewAeonik/AeonikTRIAL-LightItalic.otf') format('opentype');
+    font-weight: lighter;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: 'aeonik';
+    src: url('../../asset/Font/NewAeonik/AeonikTRIAL-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'aeonik';
+    src: url('../../asset/Font/NewAeonik/AeonikTRIAL-RegularItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+  }
+  

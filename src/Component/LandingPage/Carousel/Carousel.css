@@ -1,0 +1,8 @@
+.slick-slide {
+    margin-right: 8rem; 
+}
+.Slides{
+    white-space: nowrap;
+    overflow: hidden;
+    height: 80vh;
+}
