@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from '@mui/material'
+import { Box, Button, Typography, styled, useMediaQuery, useTheme } from '@mui/material'
 import React from 'react'
 import './index.css'
 import InfinitSlider from './InfinitSlider/InfinitSlider'
@@ -18,57 +18,81 @@ import Footer from './Footer/Footer'
 
 
 const LandingPage = () => {
+
+  const Button = styled('button')(() => ({
+    background: 'linear-gradient(#fdd33c 0%, #fdd33c 0%)',
+    backgroundSize: '100% 0%',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'bottom',
+    border: 'none',
+    cursor: 'pointer',
+    transition: 'background-size 0.35s ease-in',
+    position: 'relative',
+
+    '&:hover': {
+      backgroundSize: '100% 100%',
+    },
+  }));
+
+  const theme = useTheme();
+  const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+  const isMobile = theme.breakpoints.down('xs')
+
   return (
     <>
+
+      {/* TOP INFINIT SLIDER */}
+      <InfinitSlider />
+
       <Box sx={{ position: 'relative' }} className="banner-img">
 
-        {/* TOP INFINIT SLIDER */}
-        <InfinitSlider />
-
+        <Box className='overlay' ></Box>
 
         {/* NAVBAR */}
-        <Navbar />
-
+        <Box sx={{ display: { sm: 'contents', xs: 'none' } }}>
+          <Navbar />
+        </Box>
 
         {/* HERO MAIN HEADING */}
-        <Box sx={{ display: 'flex', alignItems: 'end', gap: '5rem', mt: '6.2%' }}>
+        <Box sx={{ display: 'flex', flexDirection: isTablet ? 'column' : 'row', alignItems: isTablet ? 'center' : 'end', gap: isTablet ? '2rem':'5rem', mt: isTablet ? '7rem' : '10.6rem' }}>
           <Box>
-            <Typography variant='h4' sx={{ fontFamily: 'aeonik-regbold', lineHeight: '6rem', fontWeight: 'bold', fontSize: '6rem', backgroundColor: '#fff', display: 'inline-block', px: 1.8, py: 1 }}>DIGI 4.0</Typography>
+            <Typography variant='h4' sx={{ fontFamily: 'aeonik-regbold', lineHeight: isTablet ? '4.8rem' : '6rem', fontWeight: 'bold', fontSize: isTablet ? '4.8rem' : '6rem' , backgroundColor: '#fff', display: 'inline-block', px: 1.8, pt: 1 }}>DIGI 4.0</Typography>
             <br />
-            <Typography sx={{ fontFamily: 'aeonik-regbold', lineHeight: '6rem', fontWeight: 'bold', fontSize: '6rem', backgroundColor: '#fff', display: 'inline-block', px: 1.8, py: 1 }}>COLLECTION</Typography>
+            <Typography sx={{ fontFamily: 'aeonik-regbold', lineHeight: isTablet ? '4.8rem' : '6rem', fontWeight: 'bold', fontSize: isTablet ? '4.8rem' : '6rem', backgroundColor: '#fff', display: 'inline-block', px: 1.8, pb: 1.5 }}>COLLECTION</Typography>
           </Box>
-          <Box sx={{ mb: 1, display: 'flex', alignItems: 'center', gap: '0.5rem', backgroundColor: '#fdd33c', px: '15px', pr: '2px', py: '6px' }}>
-            <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: '1.5rem', px: '8px', py: '3px', borderRadius: '7px', }}>SHOP NOW</Button>
-            <ArrowOutwardIcon sx={{ color: '#000', fontSize: '2.5rem' }} />
+          <Box sx={{mb:1, display: 'flex', alignItems: 'center', gap: isTablet ? '0.3rem':'0.5rem', backgroundColor: '#fdd33c', px: isTablet ? '12px':'18px', pr: isTablet ? '3px':'6px', py: isTablet ? '4px' :'6px' }}>
+            <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: isTablet ? '1.2rem' : '1.5rem', px: '8px', py: '8px', borderRadius: '7px', }}>SHOP NOW</Button>
+            <ArrowOutwardIcon sx={{ color: '#000', fontSize: isTablet ? '1.7rem' : '2.2rem' }} />
           </Box>
         </Box>
 
 
+
         {/* SIDE WALL TEXT */}
-        <Box sx={{ display: 'flex', flexDirection: 'column', position: 'absolute', right: 0, top: 115, gap: '0.3rem' }}>
+        <Box sx={{ display:{lg:'flex',md:'none',xs:'none'}, flexDirection: 'column', position: 'absolute', right: 0, bottom: 70, gap: '0.3rem' }}>
           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.3rem' }}>
             <ArrowUpwardIcon sx={{ color: '#fff', fontSize: '1.8rem' }} />
-            <Typography sx={{ color: '#fff', textOrientation: 'mixed', writingMode: 'vertical-lr', transform: 'rotate(180deg)', fontSize: '1.8rem' }}>FIRST COLLECTION</Typography>
+            <Typography sx={{ fontFamily: 'aeonik-reg', fontWeight: '500', color: '#fff', textOrientation: 'mixed', writingMode: 'vertical-lr', transform: 'rotate(180deg)', fontSize: '1.85rem' }}>FIRST COLLECTION</Typography>
           </Box>
           <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.3rem' }}>
             <ArrowUpwardIcon sx={{ color: '#fff', fontSize: '1.8rem' }} />
-            <Typography sx={{ color: '#fff', textOrientation: 'mixed', writingMode: 'vertical-lr', transform: 'rotate(180deg)', fontSize: '1.8rem' }}>NOW AVAILABLE</Typography>
+            <Typography sx={{ fontFamily: 'aeonik-reg', fontWeight: '500', color: '#fff', textOrientation: 'mixed', writingMode: 'vertical-lr', transform: 'rotate(180deg)', fontSize: '1.85rem' }}>NOW AVAILABLE</Typography>
           </Box>
         </Box>
 
 
 
         {/* BOTTOM WALL TEXT */}
-        <Box sx={{ display: 'flex', position: 'absolute', right: 80, bottom: 0, gap: '0.3rem' }}>
+        <Box sx={{ display: {lg:'flex',md:'none',xs:'none'}, position: 'absolute', right: 50, bottom: 0, gap: '0.3rem' }}>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
-            <Typography sx={{ color: '#fff', fontSize: '1.8rem' }}>NOW AVAILABLE</Typography>
+            <Typography sx={{ fontFamily: 'aeonik-reg', fontWeight: '500', color: '#fff', fontSize: '1.8rem' }}>NOW AVAILABLE</Typography>
             <ArrowForwardIcon sx={{ color: '#fff', fontSize: '1.8rem' }} />
           </Box>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: '0.3rem' }}>
-            <Typography sx={{ color: '#fff', fontSize: '1.8rem' }}>FIRST COLLECTION</Typography>
+            <Typography sx={{ fontFamily: 'aeonik-reg', fontWeight: '500', color: '#fff', fontSize: '1.8rem' }}>FIRST COLLECTION</Typography>
             <ArrowForwardIcon sx={{ color: '#fff', fontSize: '1.8rem' }} />
           </Box>
-          <Typography sx={{ color: '#fff', fontSize: '1.8rem' }}>NOW AVAILABLE</Typography>
+          <Typography sx={{ fontFamily: 'aeonik-reg', fontWeight: '500', color: '#fff', fontSize: '1.8rem' }}>NOW AVAILABLE</Typography>
         </Box>
 
       </Box>
@@ -104,7 +128,7 @@ const LandingPage = () => {
             </Box>
 
             <Box sx={{ mb: 1, width: 'fit-content', display: 'flex', alignItems: 'center', gap: '0.5rem', backgroundColor: '#fdd33c', px: '15px', pr: '2px', py: '6px', }}>
-              <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: '1.5rem', px: '8px', py: '3px', borderRadius: '7px', }}>SHOP NOW</Button>
+              <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: '1.5rem', px: '8px', py: '8px', borderRadius: '7px', }}>SHOP NOW</Button>
               <ArrowOutwardIcon sx={{ color: '#000', fontSize: '2.5rem' }} />
             </Box>
           </Box>
@@ -120,7 +144,7 @@ const LandingPage = () => {
               </Box>
 
               <Box sx={{ mb: 1, width: 'fit-content', display: 'flex', alignItems: 'center', gap: '0.5rem', backgroundColor: '#fdd33c', px: '15px', pr: '2px', py: '6px', }}>
-                <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: '1.5rem', px: '8px', py: '3px', borderRadius: '7px', }}>SHOP NOW</Button>
+                <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: '1.5rem', px: '8px', py: '8px', borderRadius: '7px', }}>SHOP NOW</Button>
                 <ArrowOutwardIcon sx={{ color: '#000', fontSize: '2.5rem' }} />
               </Box>
             </Box>
@@ -145,14 +169,14 @@ const LandingPage = () => {
 
 
       {/* Button */}
-      <Box sx={{ mx:6, mt:10, mb: 20, width: 'fit-content', display: 'flex', alignItems: 'center', gap: '0.5rem', backgroundColor: '#fdd33c', px: '15px', pr: '2px', py: '6px', }}>
-        <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: '1.3rem', px: '8px', py: '3px', borderRadius: '7px', }}>SEE MORE</Button>
+      <Box sx={{ mx: 6, mt: 10, mb: 20, width: 'fit-content', display: 'flex', alignItems: 'center', gap: '0.5rem', backgroundColor: '#fdd33c', px: '15px', pr: '2px', py: '6px', }}>
+        <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: '1.3rem', px: '8px', py: '8px', borderRadius: '7px', }}>SEE MORE</Button>
         <ArrowOutwardIcon sx={{ color: '#000', fontSize: '2rem' }} />
       </Box>
 
 
       {/* FOOTER */}
-      <Footer/>
+      <Footer />
 
     </>
   )

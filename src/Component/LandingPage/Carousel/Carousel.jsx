@@ -8,11 +8,27 @@ import '../index.css'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './Carousel.css'
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, Typography, styled } from '@mui/material';
 import Marquee from "react-fast-marquee";
 
 
 const Card1 = () => {
+
+    const Button = styled('button')(() => ({
+        background: 'linear-gradient(#fdd33c 0%, #fdd33c 0%)',
+        backgroundSize: '100% 0%',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'bottom',
+        border: 'none',
+        cursor: 'pointer',
+        transition: 'background-size 0.35s ease-in',
+        position: 'relative',
+    
+        '&:hover': {
+          backgroundSize: '100% 100%',
+        },
+      }));
+
     return (
         <>
             <Box sx={{ position: 'relative' }}>
@@ -30,7 +46,7 @@ const Card1 = () => {
                 </Box>
 
                 <Box sx={{ mb: 1, width: 'fit-content', display: 'flex', alignItems: 'center', gap: '0.5rem', backgroundColor: '#fdd33c', px: '15px', pr: '2px', py: '6px' }}>
-                    <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: '1.5rem', px: '8px', py: '3px', borderRadius: '7px', }}>ACCESSOIRES</Button>
+                    <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: '1.5rem', px: '8px', py: '8px', borderRadius: '7px', }}>ACCESSOIRES</Button>
                     <ArrowOutwardIcon sx={{ color: '#000', fontSize: '2.5rem' }} />
                 </Box>
             </Box>
@@ -39,6 +55,22 @@ const Card1 = () => {
 }
 
 const Card2 = (props) => {
+
+    const Button = styled('button')(() => ({
+        background: 'linear-gradient(#fdd33c 0%, #fdd33c 0%)',
+        backgroundSize: '100% 0%',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'bottom',
+        border: 'none',
+        cursor: 'pointer',
+        transition: 'background-size 0.35s ease-in',
+        position: 'relative',
+    
+        '&:hover': {
+          backgroundSize: '100% 100%',
+        },
+      }));
+
     return (
         <>
             <Box sx={{ position: 'relative' }}>
@@ -56,35 +88,33 @@ const Card2 = (props) => {
                 </Box>
 
                 <Box sx={{ mb: 1, width: 'fit-content', display: 'flex', alignItems: 'center', gap: '0.5rem', backgroundColor: '#fdd33c', px: '15px', pr: '2px', py: '6px' }}>
-                    <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: '1.5rem', px: '8px', py: '3px', borderRadius: '7px', }}>CLOTHES</Button>
+                    <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: '1.5rem', px: '8px', py: '8px', borderRadius: '7px', }}>CLOTHES</Button>
                     <ArrowOutwardIcon sx={{ color: '#000', fontSize: '2.5rem' }} />
                 </Box>
             </Box>
 
-            {/* <div style={{ position: 'relative' }}>
-                <img style={{ height: '70vh', width: '100%' }} src={img2} alt="" />
-
-                <div style={{ position: 'absolute', bottom: '10rem', left: 0, }}>
-
-                    <Box sx={{ backgroundColor: '#fff', color: '#000', width: 'fit-content' }}>
-                        <Typography sx={{ lineHeight: '4rem', fontFamily: 'aeonik-regbold', fontWeight: 'bold', color: '#000', textAlign: 'center', fontSize: '3.7rem', px: 1 }} >DIGI</Typography>
-                    </Box>
-
-                    <Box sx={{ backgroundColor: '#fff', color: '#000', width: 'fit-content' }}>
-                        <Typography sx={{ lineHeight: '4rem', fontFamily: 'aeonik-regbold', fontWeight: 'bold', color: '#000', textAlign: 'center', fontSize: '3.7rem', px: 1 }} >CLOTHES</Typography>
-                    </Box>
-                </div>
-
-                <Box sx={{ mb: 1, width: 'fit-content', display: 'flex', alignItems: 'center', gap: '0.5rem', backgroundColor: '#fdd33c', px: '15px', pr: '2px', py: '6px' }}>
-                    <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: '1.5rem', px: '8px', py: '3px', borderRadius: '7px', }}>CLOTHES</Button>
-                    <ArrowOutwardIcon sx={{ color: '#000', fontSize: '2.5rem' }} />
-                </Box>
-            </div> */}
+           
         </>
     )
 }
 
 const Card3 = (props) => {
+
+    const Button = styled('button')(() => ({
+        background: 'linear-gradient(#fdd33c 0%, #fdd33c 0%)',
+        backgroundSize: '100% 0%',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'bottom',
+        border: 'none',
+        cursor: 'pointer',
+        transition: 'background-size 0.35s ease-in',
+        position: 'relative',
+    
+        '&:hover': {
+          backgroundSize: '100% 100%',
+        },
+      }));
+
     return (
         <>
             <Box sx={{ position: 'relative' }}>
@@ -97,7 +127,7 @@ const Card3 = (props) => {
                 </Box>
 
                 <Box sx={{ mb: 1, width: 'fit-content', display: 'flex', alignItems: 'center', gap: '0.5rem', backgroundColor: '#fdd33c', px: '15px', pr: '2px', py: '6px' }}>
-                    <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: '1.5rem', px: '8px', py: '3px', borderRadius: '7px', }}>SHOP NOW</Button>
+                    <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: '1.5rem', px: '8px', py: '8px', borderRadius: '7px', }}>SHOP NOW</Button>
                     <ArrowOutwardIcon sx={{ color: '#000', fontSize: '2.5rem' }} />
                 </Box>
             </Box>
@@ -121,6 +151,22 @@ const Card3 = (props) => {
 }
 
 const Card4 = (props) => {
+
+    const Button = styled('button')(() => ({
+        background: 'linear-gradient(#fdd33c 0%, #fdd33c 0%)',
+        backgroundSize: '100% 0%',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'bottom',
+        border: 'none',
+        cursor: 'pointer',
+        transition: 'background-size 0.35s ease-in',
+        position: 'relative',
+    
+        '&:hover': {
+          backgroundSize: '100% 100%',
+        },
+      }));
+
     return (
         <>
             <div style={{ width: '30vw', height: '70vh', backgroundColor: '#f1f1f1' }}>
@@ -136,7 +182,7 @@ const Card4 = (props) => {
 
                 </div>
                 <Box sx={{ mb: 1, width: 'fit-content', display: 'flex', alignItems: 'center', gap: '0.5rem', backgroundColor: '#fdd33c', px: '15px', pr: '2px', py: '6px' }}>
-                    <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: '1.5rem', px: '8px', py: '3px', borderRadius: '7px', }}>SHOP NOW</Button>
+                    <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: '1.5rem', px: '8px', py: '8px', borderRadius: '7px', }}>SHOP NOW</Button>
                     <ArrowOutwardIcon sx={{ color: '#000', fontSize: '2.5rem' }} />
                 </Box>
             </div>
@@ -147,83 +193,9 @@ const Card4 = (props) => {
 
 const Carousel = () => {
 
-    var settings = {
-        dots: false,
-        infinite: true,
-        speed: 100,
-        autoplay: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplaySpeed: 1000,
-        cssEase: 'linear',
-        swipeToSlide: true,
-        pauseOnHover: true,
-        initialSlide: 0,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    initialSlide: 2
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    };
-
     return (
         <>
-            {/* <Slider className='Slides' {...settings}>
-                <div style={{}}>
-                    <Card1 />
-                </div>
-
-                <div style={{}}>
-                    <Card2 />
-                </div>
-
-                <div style={{}}>
-                    <Card3 />
-                </div>
-
-                <div style={{}}>
-                    <Card4 />
-                </div>
-
-                <div style={{}}>
-                    <Card1 />
-                </div>
-
-                <div style={{}}>
-                    <Card2 />
-                </div>
-
-                <div style={{}}>
-                    <Card3 />
-                </div>
-
-                <div style={{}}>
-                    <Card4 />
-                </div>
-
-            </Slider> */}
-
+            
             <Marquee pauseOnHover={true} speed={60} style={{overflow:'hidden'}}>
                 <Box sx={{ mx: 8 }}>
                     <Card1 />
