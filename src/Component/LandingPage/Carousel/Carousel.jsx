@@ -8,11 +8,15 @@ import '../index.css'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './Carousel.css'
-import { Box, Button, Typography, styled } from '@mui/material';
+import { Box, Button, Typography, styled, useMediaQuery, useTheme } from '@mui/material';
 import Marquee from "react-fast-marquee";
 
 
 const Card1 = () => {
+
+    const theme = useTheme();
+    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
     const Button = styled('button')(() => ({
         background: 'linear-gradient(#fdd33c 0%, #fdd33c 0%)',
@@ -23,31 +27,31 @@ const Card1 = () => {
         cursor: 'pointer',
         transition: 'background-size 0.35s ease-in',
         position: 'relative',
-    
+
         '&:hover': {
-          backgroundSize: '100% 100%',
+            backgroundSize: '100% 100%',
         },
-      }));
+    }));
 
     return (
         <>
             <Box sx={{ position: 'relative' }}>
-                <img style={{ height: '70vh', width: '30vw' }} src={img1} alt="" />
+                <img style={{ height: isMobile ? '50vh' : '70vh', width: isMobile ? '85vw' : isTablet ? '40vw' : '30vw' }} src={img1} alt="" />
 
-                <Box sx={{ position: 'absolute', top: '4rem', left: 0, }}>
+                <Box sx={{ position: 'absolute', top: isTablet ? '2rem' : '4rem', left: 0, }}>
 
                     <Box sx={{ backgroundColor: '#fff', color: '#000', width: 'fit-content' }}>
-                        <Typography sx={{ lineHeight: '4rem', fontFamily: 'aeonik-regbold', fontWeight: 'bold', color: '#000', textAlign: 'center', fontSize: '3.7rem', px: 1 }} >DIGI</Typography>
+                        <Typography sx={{ lineHeight: isTablet ? '3rem' : '4rem', fontFamily: 'aeonik-regbold', fontWeight: 'bold', color: '#000', textAlign: 'center', fontSize: isMobile ? '2rem' : isTablet ? '2.5rem' : '3.7rem', px: 1 }} >DIGI</Typography>
                     </Box>
 
                     <Box sx={{ backgroundColor: '#fff', color: '#000', width: 'fit-content' }}>
-                        <Typography sx={{ lineHeight: '4rem', fontFamily: 'aeonik-regbold', fontWeight: 'bold', color: '#000', textAlign: 'center', fontSize: '3.7rem', px: 1 }} >ACCESSOIRES</Typography>
+                        <Typography sx={{ lineHeight: isTablet ? '3rem' :  '4rem', fontFamily: 'aeonik-regbold', fontWeight: 'bold', color: '#000', textAlign: 'center', fontSize: isMobile ? '2rem' : isTablet ? '2.5rem' : '3.7rem', px: 1 }} >ACCESSOIRES</Typography>
                     </Box>
                 </Box>
 
                 <Box sx={{ mb: 1, width: 'fit-content', display: 'flex', alignItems: 'center', gap: '0.5rem', backgroundColor: '#fdd33c', px: '15px', pr: '2px', py: '6px' }}>
-                    <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: '1.5rem', px: '8px', py: '8px', borderRadius: '7px', }}>ACCESSOIRES</Button>
-                    <ArrowOutwardIcon sx={{ color: '#000', fontSize: '2.5rem' }} />
+                    <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: isTablet ? '1.2rem' : '1.5rem', px: '8px', py: '8px', borderRadius: '7px', }}>ACCESSOIRES</Button>
+                    <ArrowOutwardIcon sx={{ color: '#000', fontSize: isTablet ? '1.8rem' : '2.5rem' }} />
                 </Box>
             </Box>
         </>
@@ -56,6 +60,10 @@ const Card1 = () => {
 
 const Card2 = (props) => {
 
+    const theme = useTheme();
+    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+
     const Button = styled('button')(() => ({
         background: 'linear-gradient(#fdd33c 0%, #fdd33c 0%)',
         backgroundSize: '100% 0%',
@@ -65,41 +73,45 @@ const Card2 = (props) => {
         cursor: 'pointer',
         transition: 'background-size 0.35s ease-in',
         position: 'relative',
-    
+
         '&:hover': {
-          backgroundSize: '100% 100%',
+            backgroundSize: '100% 100%',
         },
-      }));
+    }));
 
     return (
         <>
             <Box sx={{ position: 'relative' }}>
-                <img style={{ height: '70vh', width: '30vw' }} src={img2} alt="" />
+                <img style={{ height: isMobile ? '50vh' : '70vh', width: isMobile ? '85vw' : isTablet ? '40vw' : '30vw' }} src={img2} alt="" />
 
                 <Box sx={{ position: 'absolute', bottom: '10rem', left: 0, }}>
 
                     <Box sx={{ backgroundColor: '#fff', color: '#000', width: 'fit-content' }}>
-                        <Typography sx={{ lineHeight: '4rem', fontFamily: 'aeonik-regbold', fontWeight: 'bold', color: '#000', textAlign: 'center', fontSize: '3.7rem', px: 1 }} >DIGI</Typography>
+                        <Typography sx={{ lineHeight: isTablet ? '3rem' : '4rem', fontFamily: 'aeonik-regbold', fontWeight: 'bold', color: '#000', textAlign: 'center', fontSize: isMobile ? '2rem' : isTablet ? '3rem' : '3.7rem', px: 1 }} >DIGI</Typography>
                     </Box>
 
                     <Box sx={{ backgroundColor: '#fff', color: '#000', width: 'fit-content' }}>
-                        <Typography sx={{ lineHeight: '4rem', fontFamily: 'aeonik-regbold', fontWeight: 'bold', color: '#000', textAlign: 'center', fontSize: '3.7rem', px: 1 }} >CLOTHES</Typography>
+                        <Typography sx={{ lineHeight: isTablet ? '3rem' : '4rem', fontFamily: 'aeonik-regbold', fontWeight: 'bold', color: '#000', textAlign: 'center', fontSize: isMobile ? '2rem' : isTablet ? '3rem' : '3.7rem', px: 1 }} >CLOTHES</Typography>
                     </Box>
                 </Box>
 
                 <Box sx={{ mb: 1, width: 'fit-content', display: 'flex', alignItems: 'center', gap: '0.5rem', backgroundColor: '#fdd33c', px: '15px', pr: '2px', py: '6px' }}>
-                    <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: '1.5rem', px: '8px', py: '8px', borderRadius: '7px', }}>CLOTHES</Button>
-                    <ArrowOutwardIcon sx={{ color: '#000', fontSize: '2.5rem' }} />
+                    <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: isTablet ? '1.2rem' : '1.5rem', px: '8px', py: '8px', borderRadius: '7px', }}>CLOTHES</Button>
+                    <ArrowOutwardIcon sx={{ color: '#000', fontSize: isTablet ? '1.8rem' : '2.5rem' }} />
                 </Box>
             </Box>
 
-           
+
         </>
     )
 }
 
 const Card3 = (props) => {
 
+    const theme = useTheme();
+    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+
     const Button = styled('button')(() => ({
         background: 'linear-gradient(#fdd33c 0%, #fdd33c 0%)',
         backgroundSize: '100% 0%',
@@ -109,26 +121,26 @@ const Card3 = (props) => {
         cursor: 'pointer',
         transition: 'background-size 0.35s ease-in',
         position: 'relative',
-    
+
         '&:hover': {
-          backgroundSize: '100% 100%',
+            backgroundSize: '100% 100%',
         },
-      }));
+    }));
 
     return (
         <>
             <Box sx={{ position: 'relative' }}>
-                <img style={{ height: '70vh', width: '30vw' }} src={img3} alt="" />
+                <img style={{ height: isMobile ? '50vh' : '70vh', width: isMobile ? '85vw' : isTablet ? '40vw' : '30vw' }} src={img3} alt="" />
 
-                <Box style={{ position: 'absolute', bottom: '13rem', left: '26%', }}>
+                <Box style={{ position: 'absolute', bottom: isTablet ? '8rem' : '13rem', left: '20%', }}>
                     <Box sx={{ backgroundColor: '#fff', color: '#000', width: 'fit-content' }}>
-                        <Typography sx={{ fontFamily: 'aeonik-regbold', fontWeight: 'bold', color: '#000', textAlign: 'center', fontSize: '2rem', px: 1 }} >NO CLOTHES ?</Typography>
+                        <Typography sx={{ fontFamily: 'aeonik-regbold', fontWeight: 'bold', color: '#000', textAlign: 'center', fontSize: isTablet ? '1.5rem' : '2rem', px: 1 }} >NO CLOTHES ?</Typography>
                     </Box>
                 </Box>
 
                 <Box sx={{ mb: 1, width: 'fit-content', display: 'flex', alignItems: 'center', gap: '0.5rem', backgroundColor: '#fdd33c', px: '15px', pr: '2px', py: '6px' }}>
-                    <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: '1.5rem', px: '8px', py: '8px', borderRadius: '7px', }}>SHOP NOW</Button>
-                    <ArrowOutwardIcon sx={{ color: '#000', fontSize: '2.5rem' }} />
+                    <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: isTablet ? '1.2rem' : '1.5rem', px: '8px', py: '8px', borderRadius: '7px', }}>SHOP NOW</Button>
+                    <ArrowOutwardIcon sx={{ color: '#000', fontSize: isTablet ? '1.8rem' : '2.5rem' }} />
                 </Box>
             </Box>
 
@@ -152,6 +164,10 @@ const Card3 = (props) => {
 
 const Card4 = (props) => {
 
+    const theme = useTheme();
+    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+
     const Button = styled('button')(() => ({
         background: 'linear-gradient(#fdd33c 0%, #fdd33c 0%)',
         backgroundSize: '100% 0%',
@@ -161,29 +177,29 @@ const Card4 = (props) => {
         cursor: 'pointer',
         transition: 'background-size 0.35s ease-in',
         position: 'relative',
-    
+
         '&:hover': {
-          backgroundSize: '100% 100%',
+            backgroundSize: '100% 100%',
         },
-      }));
+    }));
 
     return (
         <>
-            <div style={{ width: '30vw', height: '70vh', backgroundColor: '#f1f1f1' }}>
+            <div style={{ width: isMobile ? '85vw' : isTablet ? '40vw' : '30vw', height: isMobile ? '50vh' : '70vh', backgroundColor: '#f1f1f1' }}>
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', flexDirection: 'column', gap: "2rem" }}>
 
                     <Box sx={{ backgroundColor: '#fff', color: '#000', mx: 'auto', textAlign: 'center', width: 'fit-content' }}>
-                        <Typography sx={{ fontFamily: 'aeonik', fontWeight: 'bold', lineHeight: '9rem', color: '#000', textAlign: 'center', fontSize: '8rem', px: 3 }} >SHOP</Typography>
+                        <Typography sx={{ fontFamily: 'aeonik', fontWeight: 'bold', lineHeight: isTablet ? '4.5rem':'9rem', color: '#000', textAlign: 'center', fontSize: isMobile ? '3.8rem' : isTablet ? '4rem' : '8rem', px: 3 }} >SHOP</Typography>
                     </Box>
 
                     <Box sx={{ backgroundColor: '#fff', color: '#000', mx: 'auto', textAlign: 'center', width: 'fit-content' }}>
-                        <Typography sx={{ fontFamily: 'aeonik-regbold', fontWeight: 'bold', color: '#000', textAlign: 'center', fontSize: '28px' }} >COLLECTION DIGI 4.0</Typography>
+                        <Typography sx={{ fontFamily: 'aeonik-regbold', fontWeight: 'bold', color: '#000', textAlign: 'center', fontSize: isMobile ? '20px' : isTablet ? '24px' :'28px' }} >COLLECTION DIGI 4.0</Typography>
                     </Box>
 
                 </div>
                 <Box sx={{ mb: 1, width: 'fit-content', display: 'flex', alignItems: 'center', gap: '0.5rem', backgroundColor: '#fdd33c', px: '15px', pr: '2px', py: '6px' }}>
-                    <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: '1.5rem', px: '8px', py: '8px', borderRadius: '7px', }}>SHOP NOW</Button>
-                    <ArrowOutwardIcon sx={{ color: '#000', fontSize: '2.5rem' }} />
+                    <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: isTablet ? '1.2rem' : '1.5rem', px: '8px', py: '8px', borderRadius: '7px', }}>SHOP NOW</Button>
+                    <ArrowOutwardIcon sx={{ color: '#000', fontSize: isTablet ? '1.8rem' : '2.5rem' }} />
                 </Box>
             </div>
         </>
@@ -195,8 +211,8 @@ const Carousel = () => {
 
     return (
         <>
-            
-            <Marquee pauseOnHover={true} speed={60} style={{overflow:'hidden'}}>
+
+            <Marquee pauseOnHover={true} speed={60} style={{ overflow: 'hidden', width:'100%', overflowX:'hidden' }}>
                 <Box sx={{ mx: 8 }}>
                     <Card1 />
                 </Box>

@@ -4,6 +4,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     height: 97vh;
+    width: 100%;
 }
 .overlay{
   width: 100%;
@@ -11,6 +12,7 @@
   background: linear-gradient(to left, #00000038, #00000002);
   opacity: 0.3;
 }
+
 
 
 

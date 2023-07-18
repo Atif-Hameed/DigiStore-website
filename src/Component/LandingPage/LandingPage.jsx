@@ -36,7 +36,7 @@ const LandingPage = () => {
 
   const theme = useTheme();
   const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
-  const isMobile = theme.breakpoints.down('xs')
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
   return (
     <>
@@ -49,16 +49,16 @@ const LandingPage = () => {
         <Box className='overlay' ></Box>
 
         {/* NAVBAR */}
-        <Box sx={{ display: { sm: 'contents', xs: 'none' } }}>
+        <Box >
           <Navbar />
         </Box>
 
         {/* HERO MAIN HEADING */}
-        <Box sx={{ display: 'flex', flexDirection: isTablet ? 'column' : 'row', alignItems: isTablet ? 'center' : 'end', gap: isTablet ? '2rem':'5rem', mt: isTablet ? '7rem' : '10.6rem' }}>
+        <Box sx={{ display: 'flex', flexDirection: isTablet ? 'column' : 'row', alignItems:  isTablet ? 'center' : 'end', gap: isMobile ? '3rem' : isTablet ? '2rem':'5rem', mt: isMobile ? '32rem' : isTablet ? '7rem' : '10.6rem',}}>
           <Box>
-            <Typography variant='h4' sx={{ fontFamily: 'aeonik-regbold', lineHeight: isTablet ? '4.8rem' : '6rem', fontWeight: 'bold', fontSize: isTablet ? '4.8rem' : '6rem' , backgroundColor: '#fff', display: 'inline-block', px: 1.8, pt: 1 }}>DIGI 4.0</Typography>
+            <Typography variant='h4' sx={{ fontFamily: 'aeonik-regbold', lineHeight: isMobile ? '2.9rem' : isTablet ? '4.8rem' : '6rem', fontWeight: 'bold', fontSize:  isMobile ? '2.7rem' : isTablet ? '4.8rem' : '6rem' , backgroundColor: '#fff', display: 'inline-block', px: 1.8, pt: isMobile ? 0.5 : 1 }}>DIGI 4.0</Typography>
             <br />
-            <Typography sx={{ fontFamily: 'aeonik-regbold', lineHeight: isTablet ? '4.8rem' : '6rem', fontWeight: 'bold', fontSize: isTablet ? '4.8rem' : '6rem', backgroundColor: '#fff', display: 'inline-block', px: 1.8, pb: 1.5 }}>COLLECTION</Typography>
+            <Typography sx={{ fontFamily: 'aeonik-regbold', lineHeight: isMobile ? '2.9rem' : isTablet ? '4.8rem' : '6rem', fontWeight: 'bold', fontSize: isMobile ? '2.7em' : isTablet ? '4.8rem' : '6rem', backgroundColor: '#fff', display: 'inline-block', px: 1.8, pb: isMobile ? 0.5 : 1.5 }}>COLLECTION</Typography>
           </Box>
           <Box sx={{mb:1, display: 'flex', alignItems: 'center', gap: isTablet ? '0.3rem':'0.5rem', backgroundColor: '#fdd33c', px: isTablet ? '12px':'18px', pr: isTablet ? '3px':'6px', py: isTablet ? '4px' :'6px' }}>
             <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: isTablet ? '1.2rem' : '1.5rem', px: '8px', py: '8px', borderRadius: '7px', }}>SHOP NOW</Button>
@@ -99,7 +99,7 @@ const LandingPage = () => {
 
 
       {/* CENTER SMALL TEXT FIRST */}
-      <Box sx={{ mt: '9rem', mb: '5rem' }}>
+      <Box sx={{ mt: isTablet ? '4rem' : '9rem', mb: isTablet ? '3rem' : '5rem' }}>
         <Typography sx={{ fontFamily: 'aeonik-reg-bold', color: '#000', textAlign: 'center', fontSize: '1.5rem' }}>DISCOVER THE COLLECTION</Typography>
         <Box sx={{ backgroundColor: '#fdd33c', color: '#000', mx: 'auto', textAlign: 'center', width: 'fit-content', px: 1 }}>
           <Typography sx={{ fontFamily: 'aeonik-reg-bold', color: '#000', textAlign: 'center', fontSize: '1.3rem', fontWeight: 'bold' }} >DIGIDOP</Typography>
@@ -115,37 +115,37 @@ const LandingPage = () => {
 
 
       {/* Big SHirts with BLACK BG */}
-      <Box sx={{ width: '100%', height: '100%', backgroundColor: '#000', mt: '8rem', py: '11rem' }} >
-        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-around' }}>
+      <Box sx={{ width: '100%', height: '100%', backgroundColor: '#000', mt: isMobile ? '3rem' : '8rem', py: isMobile ? '6rem' : '11rem' }} >
+        <Box sx={{ display: 'flex', gap: isMobile ? 8 : 'normal', flexDirection: isMobile ? 'column' : 'row', alignItems: 'center', justifyContent: 'space-around' }}>
 
-          <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 13 }}>
-            <Box position={'relative'} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '120%' }}>
-              <Box component={'img'} src={shirt1} width={'29rem'} />
-              <Box sx={{ display: 'flex', position: 'absolute', bottom: '-4rem', flexDirection: 'column', alignItems: 'center' }}>
-                <Typography sx={{ fontFamily: 'aeonik-reg-bold', backgroundColor: '#fff', textAlign: 'center', width: 'fit-content', fontSize: '3.7rem', lineHeight: '4rem' }}>T-SHIRT</Typography>
-                <Typography sx={{ fontFamily: 'aeonik-reg-bold', backgroundColor: '#fff', textAlign: 'center', width: 'fit-content', fontSize: '3.7rem', lineHeight: '4rem' }}>FIGMA DESIGNER</Typography>
+          <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: isMobile ? 8 : 13 }}>
+            <Box position={'relative'} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: isMobile ? '100%' : '120%' }}>
+              <Box component={'img'} src={shirt1} width={isMobile ? '22rem' : isTablet ? '18rem' : '29rem'} />
+              <Box sx={{ display: 'flex', position: 'absolute', bottom: isMobile ? '-2rem' : '-4rem', flexDirection: 'column', alignItems: 'center' }}>
+                <Typography sx={{ fontFamily: 'aeonik-reg-bold', backgroundColor: '#fff', textAlign: 'center', width: 'fit-content', fontSize: isMobile ? '1.6rem' : isTablet ? '3rem' :  '3.7rem', lineHeight: isMobile ? '2.3rem' : isTablet ? '3rem' :  '4rem' }}>T-SHIRT</Typography>
+                <Typography sx={{ fontFamily: 'aeonik-reg-bold', backgroundColor: '#fff', textAlign: 'center', width: 'fit-content', fontSize: isMobile ? '1.6rem' : isTablet ? '3rem' :  '3.7rem', lineHeight: isMobile ? '2.3rem' : isTablet ? '3rem' :  '4rem' }}>FIGMA DESIGNER</Typography>
               </Box>
             </Box>
 
             <Box sx={{ mb: 1, width: 'fit-content', display: 'flex', alignItems: 'center', gap: '0.5rem', backgroundColor: '#fdd33c', px: '15px', pr: '2px', py: '6px', }}>
-              <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: '1.5rem', px: '8px', py: '8px', borderRadius: '7px', }}>SHOP NOW</Button>
-              <ArrowOutwardIcon sx={{ color: '#000', fontSize: '2.5rem' }} />
+              <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: isTablet ? '1.2rem' : '1.5rem', px: '8px', py: '8px', borderRadius: '7px', }}>SHOP NOW</Button>
+              <ArrowOutwardIcon sx={{ color: '#000', fontSize: isTablet ? '1.8rem' : '2.5rem' }} />
             </Box>
           </Box>
 
           <Box>
-            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 13 }}>
-              <Box position={'relative'} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '120%' }}>
-                <Box component={'img'} src={shirt2} width={'29rem'} />
-                <Box sx={{ display: 'flex', position: 'absolute', bottom: '-4rem', flexDirection: 'column', alignItems: 'center' }}>
-                  <Typography sx={{ fontFamily: 'aeonik-reg-bold', backgroundColor: '#fff', textAlign: 'center', width: 'fit-content', fontSize: '3.7rem', lineHeight: '4rem' }}>T-SHIRT</Typography>
-                  <Typography sx={{ fontFamily: 'aeonik-reg-bold', backgroundColor: '#fff', textAlign: 'center', width: 'fit-content', fontSize: '3.7rem', lineHeight: '4rem' }}>WEBFLOW BUILDER</Typography>
+            <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: isMobile ? 8 :  13 }}>
+              <Box position={'relative'} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: isMobile ? '100%' : '120%' }}>
+                <Box component={'img'} src={shirt2} width={isMobile ? '22rem' : isTablet ? '18rem' :'29rem'} />
+                <Box sx={{ display: 'flex', position: 'absolute', bottom:isMobile ? '-2rem' : '-4rem', flexDirection: 'column', alignItems: 'center' }}>
+                  <Typography sx={{ fontFamily: 'aeonik-reg-bold', backgroundColor: '#fff', textAlign: 'center', width: 'fit-content', fontSize: isMobile ? '1.6rem' : isTablet ? '3rem' : '3.7rem', lineHeight: isMobile ? '2.3rem' : isTablet ? '3rem' : '4rem' }}>T-SHIRT</Typography>
+                  <Typography sx={{ fontFamily: 'aeonik-reg-bold', backgroundColor: '#fff', textAlign: 'center', width: 'fit-content', fontSize: isMobile ? '1.6rem' : isTablet ? '3rem' : '3.7rem', lineHeight: isMobile ? '2.3rem' : isTablet ? '3rem' : '4rem' }}>WEBFLOW BUILDER</Typography>
                 </Box>
               </Box>
 
               <Box sx={{ mb: 1, width: 'fit-content', display: 'flex', alignItems: 'center', gap: '0.5rem', backgroundColor: '#fdd33c', px: '15px', pr: '2px', py: '6px', }}>
-                <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: '1.5rem', px: '8px', py: '8px', borderRadius: '7px', }}>SHOP NOW</Button>
-                <ArrowOutwardIcon sx={{ color: '#000', fontSize: '2.5rem' }} />
+                <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: isTablet ? '1.2rem' : '1.5rem', px: '8px', py: '8px', borderRadius: '7px', }}>SHOP NOW</Button>
+                <ArrowOutwardIcon sx={{ color: '#000', fontSize: isTablet ? '1.8rem' : '2.5rem' }} />
               </Box>
             </Box>
           </Box>
@@ -156,10 +156,10 @@ const LandingPage = () => {
 
 
       {/* CENTER SMALL SEcond */}
-      <Box sx={{ mt: '9rem', mb: '5rem' }}>
-        <Typography sx={{ fontFamily: 'aeonik-reg-bold', color: '#000', textAlign: 'center', fontSize: '1.5rem' }}>ALL OUR ARTICLES</Typography>
+      <Box sx={{ mt: isTablet ? '5rem' : '9rem', mb: isMobile ? '2rem' : '5rem' }}>
+        <Typography sx={{ fontFamily: 'aeonik-reg-bold', color: '#000', textAlign: 'center', fontSize: isMobile ? '1.3rem' : '1.5rem' }}>ALL OUR ARTICLES</Typography>
         <Box sx={{ backgroundColor: '#fdd33c', color: '#000', mx: 'auto', textAlign: 'center', width: 'fit-content', px: 1 }}>
-          <Typography sx={{ fontFamily: 'aeonik-reg-bold', color: '#000', textAlign: 'center', fontSize: '1.3rem', fontWeight: 'bold' }} >DIGIDOP</Typography>
+          <Typography sx={{ fontFamily: 'aeonik-reg-bold', color: '#000', textAlign: 'center', fontSize: isMobile ? '1.1rem' : '1.3rem', fontWeight: 'bold' }} >DIGIDOP</Typography>
         </Box>
       </Box>
 
@@ -169,7 +169,7 @@ const LandingPage = () => {
 
 
       {/* Button */}
-      <Box sx={{ mx: 6, mt: 10, mb: 20, width: 'fit-content', display: 'flex', alignItems: 'center', gap: '0.5rem', backgroundColor: '#fdd33c', px: '15px', pr: '2px', py: '6px', }}>
+      <Box sx={{ mx: isMobile ? 2 : 6, mt: isMobile ? 5 : 10, mb: isMobile ? 10 : 20, width: 'fit-content', display: 'flex', alignItems: 'center', gap: '0.5rem', backgroundColor: '#fdd33c', px: '15px', pr: '2px', py: '6px', }}>
         <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: '1.3rem', px: '8px', py: '8px', borderRadius: '7px', }}>SEE MORE</Button>
         <ArrowOutwardIcon sx={{ color: '#000', fontSize: '2rem' }} />
       </Box>
