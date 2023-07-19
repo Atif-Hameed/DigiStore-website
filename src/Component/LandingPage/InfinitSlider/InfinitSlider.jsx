@@ -41,7 +41,7 @@ const InfinitSlider = () => {
             <Marquee
                 speed={30}
                 direction='right'
-                style={{ backgroundColor: '#fdd33c' }}>
+                style={{ backgroundColor: '#fdd33c',zIndex:10 }}>
                 <FirstCollection />
                 <NotAvailable />
                 <FirstCollection />

@@ -29,7 +29,7 @@ const Footer = () => {
         <>
             <Box>
                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', px: isMobile ? 3 : 6, pr:isMobile ? 0.4 :'normal', py: isMobile ? 2.5 : isTablet ? 6 : 8, backgroundColor: '#fdd33c' }}>
-                    <Typography sx={{ fontSize: isMobile ? '1.3rem' : isTablet ? '2.8rem' : '3.8rem', fontFamily: 'aeonik-reg-bold' }}>Ready to have a site that converts?</Typography>
+                    <Typography sx={{ cursor:'pointer', fontSize: isMobile ? '1.3rem' : isTablet ? '2.8rem' : '3.8rem', fontFamily: 'aeonik-reg-bold', '&:hover':{textDecoration:'underline'} }}>Ready to have a site that converts?</Typography>
                     <ArrowOutwardIcon sx={{ fontSize: isMobile ? '4.2rem' : isTablet ? '4.8rem' : '6.5rem' }} />
                 </Box>
 
@@ -85,7 +85,7 @@ const Footer = () => {
 
                     <Divider sx={{ width: '100%', bgcolor: '#fff' }} />
 
-                    <Box sx={{py: isTablet ? 4 : 6, pb:isMobile ? 8 : 'normal', gap:isTablet ? 2 :'normal', display:'flex', flexDirection: isTablet ? 'column-reverse' : 'row', alignItems: isTablet ? 'start' : 'center', justifyContent: isTablet ? 'flex-start' : 'space-between'}}>
+                    <Box sx={{py: isTablet ? 4 : 5, pb:isMobile ? 8 : 9, gap:isTablet ? 2 :'normal', display:'flex', flexDirection: isTablet ? 'column-reverse' : 'row', alignItems: isTablet ? 'start' : 'center', justifyContent: isTablet ? 'flex-start' : 'space-between'}}>
                         <Box>
                             <Box sx={{color:'#fff', display:'flex', flexDirection : isMobile ? 'column' : 'row', gap: isMobile ? 2 :4,}}>
                                 <Typography sx={{fontSize: isTablet ? '0.9rem' : '1.1rem',textDecoration:'underline',cursor:'pointer'}}>Legal Notice</Typography>

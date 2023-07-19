@@ -49,7 +49,7 @@ const Card1 = () => {
                     </Box>
                 </Box>
 
-                <Box sx={{ mb: 1, width: 'fit-content', display: 'flex', alignItems: 'center', gap: '0.5rem', backgroundColor: '#fdd33c', px: '15px', pr: '2px', py: '6px' }}>
+                <Box sx={{cursor:'pointer', mb: 1, width: 'fit-content', display: 'flex', alignItems: 'center', gap: '0.5rem', backgroundColor: '#fdd33c', px: '15px', pr: '2px', py: '6px' }}>
                     <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: isTablet ? '1.2rem' : '1.5rem', px: '8px', py: '8px', borderRadius: '7px', }}>ACCESSOIRES</Button>
                     <ArrowOutwardIcon sx={{ color: '#000', fontSize: isTablet ? '1.8rem' : '2.5rem' }} />
                 </Box>
@@ -95,7 +95,7 @@ const Card2 = (props) => {
                     </Box>
                 </Box>
 
-                <Box sx={{ mb: 1, width: 'fit-content', display: 'flex', alignItems: 'center', gap: '0.5rem', backgroundColor: '#fdd33c', px: '15px', pr: '2px', py: '6px' }}>
+                <Box sx={{cursor:'pointer', mb: 1, width: 'fit-content', display: 'flex', alignItems: 'center', gap: '0.5rem', backgroundColor: '#fdd33c', px: '15px', pr: '2px', py: '6px' }}>
                     <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: isTablet ? '1.2rem' : '1.5rem', px: '8px', py: '8px', borderRadius: '7px', }}>CLOTHES</Button>
                     <ArrowOutwardIcon sx={{ color: '#000', fontSize: isTablet ? '1.8rem' : '2.5rem' }} />
                 </Box>
@@ -138,26 +138,12 @@ const Card3 = (props) => {
                     </Box>
                 </Box>
 
-                <Box sx={{ mb: 1, width: 'fit-content', display: 'flex', alignItems: 'center', gap: '0.5rem', backgroundColor: '#fdd33c', px: '15px', pr: '2px', py: '6px' }}>
+                <Box sx={{cursor:'pointer', mb: 1, width: 'fit-content', display: 'flex', alignItems: 'center', gap: '0.5rem', backgroundColor: '#fdd33c', px: '15px', pr: '2px', py: '6px' }}>
                     <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: isTablet ? '1.2rem' : '1.5rem', px: '8px', py: '8px', borderRadius: '7px', }}>SHOP NOW</Button>
                     <ArrowOutwardIcon sx={{ color: '#000', fontSize: isTablet ? '1.8rem' : '2.5rem' }} />
                 </Box>
             </Box>
 
-            {/* <div style={{ position: 'relative', height: '70vh', }}>
-                <img style={{ height: '100%', width: '100%' }} src={img3} alt="" />
-
-                <div style={{ position: 'absolute', bottom: '13rem', left: '26%', }}>
-                    <Box sx={{ backgroundColor: '#fff', color: '#000', width: 'fit-content' }}>
-                        <Typography sx={{ fontFamily: 'aeonik-regbold', fontWeight: 'bold', color: '#000', textAlign: 'center', fontSize: '2rem', px: 1 }} >NO CLOTHES ?</Typography>
-                    </Box>
-                </div>
-
-                <Box sx={{ mb: 1, width: 'fit-content', display: 'flex', alignItems: 'center', gap: '0.5rem', backgroundColor: '#fdd33c', px: '15px', pr: '2px', py: '6px' }}>
-                    <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: '1.5rem', px: '8px', py: '3px', borderRadius: '7px', }}>SHOP NOW</Button>
-                    <ArrowOutwardIcon sx={{ color: '#000', fontSize: '2.5rem' }} />
-                </Box>
-            </div> */}
         </>
     )
 }
@@ -197,7 +183,7 @@ const Card4 = (props) => {
                     </Box>
 
                 </div>
-                <Box sx={{ mb: 1, width: 'fit-content', display: 'flex', alignItems: 'center', gap: '0.5rem', backgroundColor: '#fdd33c', px: '15px', pr: '2px', py: '6px' }}>
+                <Box sx={{cursor:'pointer', mb: 1, width: 'fit-content', display: 'flex', alignItems: 'center', gap: '0.5rem', backgroundColor: '#fdd33c', px: '15px', pr: '2px', py: '6px' }}>
                     <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: isTablet ? '1.2rem' : '1.5rem', px: '8px', py: '8px', borderRadius: '7px', }}>SHOP NOW</Button>
                     <ArrowOutwardIcon sx={{ color: '#000', fontSize: isTablet ? '1.8rem' : '2.5rem' }} />
                 </Box>
