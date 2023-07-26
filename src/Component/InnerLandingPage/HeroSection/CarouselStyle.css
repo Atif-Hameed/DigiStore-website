@@ -1,0 +1,38 @@
+.slick-slide{
+    margin: 0;
+}
+
+.slick-prev, .slick-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    color: #ffffffb0;
+  }
+  
+  .slick-prev {
+    left: -140px;
+  }
+  
+  .slick-next {
+    right: -85px;
+  }
+  
+  .slick-prev:hover, .slick-next:hover {
+    background-color: transparent;
+    color: #ffffffb0;
+    opacity: 1;
+  }
+  .slick-prev:before, .slick-next:before{
+    display: none;
+  }
+
+
+  .bgHands{
+    background: url('https://assets-global.website-files.com/64760069e93084646c9ee405/64760069e93084646c9ee531_group-main-compress.svg');
+    background-position:top;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }

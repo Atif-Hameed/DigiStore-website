@@ -2,7 +2,6 @@ import { Box, Button, Typography, styled, useMediaQuery, useTheme } from '@mui/m
 import React from 'react'
 import './index.css'
 import InfinitSlider from './InfinitSlider/InfinitSlider'
-import bannerImg from '../../asset/img1.jpg'
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import Navbar from './Navbar/Navbar'
 import shirt1 from '../../asset/shirt1.png'
