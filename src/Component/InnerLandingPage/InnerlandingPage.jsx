@@ -3,6 +3,7 @@ import React from 'react'
 import InnerNavbar from './InnerNavbar/InnerNavbar'
 import HeroSection from './HeroSection/HeroSection'
 import PortfolioLogos from './PortfolioLogos/PortfolioLogos'
+import CardsType1 from './CardsType1/CardsType1'
 
 const InnerlandingPage = () => {
     return (
@@ -11,6 +12,7 @@ const InnerlandingPage = () => {
                 <InnerNavbar />
                 <HeroSection />
                 <PortfolioLogos/>
+                <CardsType1/>
             </Box>
         </>
     )

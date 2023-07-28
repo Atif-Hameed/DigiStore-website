@@ -40,8 +40,8 @@ const StyledBox = styled(Box)({
 const PortfolioLogos = () => {
     return (
         <>
-            <Box sx={{py:'10rem'}}>
-                <Box sx={{bgcolor: '#fdd33c', py: 7, px: 6.2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <Box sx={{ py: '11rem' }}>
+                <Box sx={{ bgcolor: '#fdd33c', py: 7, px: 6.2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <Typography sx={{ color: '#181818', fontFamily: 'aeonik-reg', fontSize: '3.7rem', fontWeight: '500' }}>See our portfolio</Typography>
                     <ArrowOutwardIcon sx={{ color: '#181818', fontSize: '4.5rem' }} />
                 </Box>
@@ -68,6 +68,12 @@ const PortfolioLogos = () => {
                     <img src={logo19} height={'35rem'} alt="" />
                     <img src={logo20} height={'40rem'} alt="" />
                 </StyledBox>
+            </Box>
+            <Box sx={{bgcolor:'#fff', px:19, py:18,overflow:'hidden'}}>
+                <Box sx={{opacity:0.5, content:'""', position:'absolute', width:'100%', height:'100%', top:0, left:0, backgroundColor:'rgba(0,0,0,0.1)'}} />
+                <Typography sx={{fontSize:'4.85rem', lineHeight:1.3, fontFamily:'aeonik',color:'#181818'}}>
+                    "At Digidop, we create more than just websites. We craft personalized digital experiences, propelling your success online."
+                </Typography>
             </Box>
         </>
     )
