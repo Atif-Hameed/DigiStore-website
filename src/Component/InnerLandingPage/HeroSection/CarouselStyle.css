@@ -10,6 +10,10 @@
     z-index: 1;
     color: #ffffffb0;
   }
+
+  .slick-track{
+    width: 3500px;
+  }
   
   .slick-prev {
     left: -140px;
@@ -35,4 +39,11 @@
     width: 100%;
     background-size: contain;
     background-repeat: no-repeat;
+  }
+
+
+  @media only screen and (max-width: 600px) {
+    .slick-prev,.slick-next {
+      display: none;
+    }
   }

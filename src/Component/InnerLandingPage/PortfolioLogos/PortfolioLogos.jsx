@@ -1,4 +1,4 @@
-import { Box, Typography, styled } from '@mui/material'
+import { Box, Typography, styled, useMediaQuery, useTheme } from '@mui/material'
 import React from 'react'
 import '../index.css'
 import logo1 from '../../../asset/logo1.svg'
@@ -38,40 +38,45 @@ const StyledBox = styled(Box)({
 })
 
 const PortfolioLogos = () => {
+
+    const theme = useTheme()
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+
+
     return (
         <>
-            <Box sx={{ py: '11rem' }}>
-                <Box sx={{ bgcolor: '#fdd33c', py: 7, px: 6.2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <Typography sx={{ color: '#181818', fontFamily: 'aeonik-reg', fontSize: '3.7rem', fontWeight: '500' }}>See our portfolio</Typography>
-                    <ArrowOutwardIcon sx={{ color: '#181818', fontSize: '4.5rem' }} />
+            <Box sx={{ pt: isMobile ? '7rem' : '11rem', pb: isMobile ? '4rem' : '11rem' }}>
+                <Box sx={{ bgcolor: '#fdd33c', py: isMobile ? 4 : 7, px: isMobile ? 3 : 6.2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <Typography sx={{ color: '#181818', fontFamily: 'aeonik-reg', fontSize: isMobile ? '2.2rem' : '3.7rem', fontWeight: '500' }}>See our portfolio</Typography>
+                    <ArrowOutwardIcon sx={{ color: '#181818', fontSize: isMobile ? '3.3rem' : '4.5rem' }} />
                 </Box>
 
-                <StyledBox sx={{ px: 7, position: 'relative', display: 'flex', flexWrap: 'wrap', gap: 15, mt: '10rem', justifyContent: 'center', }}>
-                    <img src={logo1} height={'40rem'} alt="" />
-                    <img src={logo2} height={'40rem'} alt="" />
-                    <img src={logo3} height={'40rem'} alt="" />
-                    <img src={logo4} height={'40rem'} alt="" />
-                    <img src={logo5} height={'40rem'} alt="" />
-                    <img src={logo6} height={'40rem'} alt="" />
-                    <img src={logo7} height={'40rem'} alt="" />
-                    <img src={logo8} height={'40rem'} alt="" />
-                    <img src={logo9} height={'40rem'} alt="" />
-                    <img src={logo10} height={'40rem'} alt="" />
-                    <img src={logo11} height={'40rem'} alt="" />
-                    <img src={logo12} height={'40rem'} alt="" />
-                    <img src={logo13} height={'40rem'} alt="" />
-                    <img src={logo14} height={'35rem'} alt="" />
-                    <img src={logo15} height={'35rem'} alt="" />
-                    <img src={logo16} height={'35rem'} alt="" />
-                    <img src={logo17} height={'35rem'} alt="" />
-                    <img src={logo18} height={'35rem'} alt="" />
-                    <img src={logo19} height={'35rem'} alt="" />
-                    <img src={logo20} height={'40rem'} alt="" />
+                <StyledBox sx={{ px: isMobile ? 2 : 7, position: 'relative', display: 'flex', flexWrap: 'wrap', gap: isMobile ? 4 : 15, mt: isMobile ? '5rem' : '10rem', justifyContent: 'center', }}>
+                    <img src={logo1} style={{height : isMobile ? '2rem' : '2.5rem'}} height={''} alt="" />
+                    <img src={logo2} style={{height : isMobile ? '1rem' : '2.5rem'}} height={''} alt="" />
+                    <img src={logo3} style={{height : isMobile ? '1.2rem' : '2.5rem'}} height={''} alt="" />
+                    <img src={logo4} style={{height : isMobile ? '1.6rem' : '2.5rem'}} height={''} alt="" />
+                    <img src={logo5} style={{height : isMobile ? '1.8rem' : '2.5rem'}} height={''} alt="" />
+                    <img src={logo6} style={{height : isMobile ? '2rem' : '2.5rem'}} height={''} alt="" />
+                    <img src={logo7} style={{height : isMobile ? '1.8rem' : '2.5rem'}} height={''} alt="" />
+                    <img src={logo8} style={{height : isMobile ? '1.8rem' : '2.5rem'}} height={''} alt="" />
+                    <img src={logo9} style={{height : isMobile ? '1.2rem' : '2.5rem'}} height={''} alt="" />
+                    <img src={logo10} style={{height : isMobile ? '1rem' : '2.5rem'}} height={''} alt="" />
+                    <img src={logo11} style={{height : isMobile ? '1rem' : '2.5rem'}} height={''} alt="" />
+                    <img src={logo12} style={{height : isMobile ? '1rem' : '2.5rem'}} height={''} alt="" />
+                    <img src={logo13} style={{height : isMobile ? '1rem' : '2.5rem'}} height={''} alt="" />
+                    <img src={logo14} style={{height : isMobile ? '1rem' : '2.2rem'}} height={'35rem'} alt="" />
+                    <img src={logo15} style={{height : isMobile ? '1rem' : '2.2rem'}} height={'35rem'} alt="" />
+                    <img src={logo16} style={{height : isMobile ? '1rem' : '2.2rem'}} height={'35rem'} alt="" />
+                    <img src={logo17} style={{height : isMobile ? '1rem' : '2.2rem'}} height={'35rem'} alt="" />
+                    <img src={logo18} style={{height : isMobile ? '0.9rem' : '2.2rem'}} height={'35rem'} alt="" />
+                    <img src={logo19} style={{height : isMobile ? '0.9rem' : '2.2rem'}} height={'35rem'} alt="" />
+                    <img src={logo20} style={{height : isMobile ? '0.9rem' : '2.5rem'}} height={''} alt="" />
                 </StyledBox>
             </Box>
-            <Box sx={{bgcolor:'#fff', px:19, py:18,overflow:'hidden'}}>
-                <Box sx={{opacity:0.5, content:'""', position:'absolute', width:'100%', height:'100%', top:0, left:0, backgroundColor:'rgba(0,0,0,0.1)'}} />
-                <Typography sx={{fontSize:'4.85rem', lineHeight:1.3, fontFamily:'aeonik',color:'#181818'}}>
+            <Box sx={{bgcolor:'#f8f8f8', px: isMobile ? 3 : 19, py: isMobile ? 8 : 18}}>
+                <Typography sx={{fontSize: isMobile ? '2.4rem' : '4.85rem', lineHeight:1.3, fontFamily:'aeonik',color:'#181818'}}>
                     "At Digidop, we create more than just websites. We craft personalized digital experiences, propelling your success online."
                 </Typography>
             </Box>

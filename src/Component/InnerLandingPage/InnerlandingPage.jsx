@@ -4,6 +4,11 @@ import InnerNavbar from './InnerNavbar/InnerNavbar'
 import HeroSection from './HeroSection/HeroSection'
 import PortfolioLogos from './PortfolioLogos/PortfolioLogos'
 import CardsType1 from './CardsType1/CardsType1'
+import CardsType2 from './CardsType2/CardsType2'
+import WebPractices from './WebPractices/WebPractices'
+import Courses from './Courses/Courses'
+import Questions from './Q&A/Questions'
+import Footer from './Footer/Footer'
 
 const InnerlandingPage = () => {
     return (
@@ -13,6 +18,11 @@ const InnerlandingPage = () => {
                 <HeroSection />
                 <PortfolioLogos/>
                 <CardsType1/>
+                <CardsType2/>
+                <WebPractices/>
+                <Courses/>
+                <Questions/>
+                <Footer/>
             </Box>
         </>
     )
