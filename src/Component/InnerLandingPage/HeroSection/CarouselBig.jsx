@@ -1,7 +1,7 @@
-import React, { Component } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import React, { Component } from "react";
 import BigCarousel1 from '../../../asset/BigCarousel1.webp'
 import BigCarousel2 from '../../../asset/BigCarousel2.webp'
 import BigCarousel3 from '../../../asset/BigCarousel3.webp'
@@ -38,8 +38,46 @@ const SimpleSlider = () => {
 
     return (
         <>
-            <Box sx={{}}>
-                <div style={{width:isMobile ? '100vw' : '75vw', height: '100%', margin: 0,}}>
+
+            <div style={{ margin: 0, overflow: isMobile ? 'hidden' : 'normal' }}>
+                <div style={{ width: isMobile ? '90vw' : '75vw', padding: '0', margin: '0 auto' }}>
+                    <Slider {...settings}>
+                        <div>
+                            <img src={BigCarousel1} width={'100%'} alt="" />
+                            <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 2 }}>
+                                <Typography sx={{ fontFamily: 'aeonik', color: '#ffffffb0', fontSize: '1.2rem' }} >Tempact Ventures</Typography>
+                                <Typography sx={{ color: '#ffffffb0', fontSize: '1.2rem' }} >29/03/2023</Typography>
+                            </Box>
+                        </div>
+                        <div>
+                            <img src={BigCarousel2} width={'100%'} alt="" />
+                            <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 2 }}>
+                                <Typography sx={{ fontFamily: 'aeonik', color: '#ffffffb0', fontSize: '1.2rem' }} >Streamnative</Typography>
+                                <Typography sx={{ color: '#ffffffb0', fontSize: '1.2rem' }} >18/01/2023</Typography>
+                            </Box>
+                        </div>
+                        <div>
+                            <img src={BigCarousel3} width={'100%'} alt="" />
+                            <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 2 }}>
+                                <Typography sx={{ fontFamily: 'aeonik', color: '#ffffffb0', fontSize: '1.2rem' }} >Join Lion</Typography>
+                                <Typography sx={{ color: '#ffffffb0', fontSize: '1.2rem' }} >04/11/2022</Typography>
+                            </Box>
+                        </div>
+                        <div>
+                            <img width={'100%'} src={BigCarousel4} />
+                            <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 2 }}>
+                                <Typography sx={{ fontFamily: 'aeonik', color: '#ffffffb0', fontSize: '1.2rem' }} >Morfo</Typography>
+                                <Typography sx={{ color: '#ffffffb0', fontSize: '1.2rem' }} >07/12/2022</Typography>
+                            </Box>
+                        </div>
+
+                    </Slider>
+                </div>
+            </div>
+
+
+            {/* <Box sx={{}}>
+                <div style={{ width: isMobile ? '100vw' : '75vw', height: '100%', margin: 0, }}>
                     <Slider {...settings}>
                         <div>
                             <img width={'100%'} src={BigCarousel1} />
@@ -71,7 +109,7 @@ const SimpleSlider = () => {
                         </div>
                     </Slider>
                 </div>
-            </Box>
+            </Box> */}
         </>
     )
 }

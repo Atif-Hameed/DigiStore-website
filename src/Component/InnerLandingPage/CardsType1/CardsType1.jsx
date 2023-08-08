@@ -47,7 +47,7 @@ const Card2 = () => {
         <>
             <Box sx={{ cursor: 'pointer', bgcolor: '#181818', pl:isMobile ? 3 : 10, pr: isMobile ? 3 : 7.5, py: isMobile ? 1 : 13, pt:isMobile ? 3 : 'normal', display: 'flex', flexDirection: 'column', gap:isMobile ? 3 : 5 }} >
                 <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                    <img src={WLogo} width={isMobile ? '70rem' : '100rem'} alt="" />
+                    <img src={WLogo} width={isMobile ? '60rem' : '100rem'} alt="" />
                     <Box sx={{ bgcolor: '#222', width: 'fit-content', py: 0.8, px: 1.3 }}>
                         <Typography sx={{ fontFamily: 'aeonik', fontWeight: 'bold', fontSize:isMobile ? '1rem' : '1.2rem', color: '#fff', }}>
                             WEBFLOW DEVELOPMENT
@@ -147,7 +147,7 @@ const CardsType1 = () => {
 
     return (
         <>
-            <Box sx={{px: isMobile ? '1.2rem':'3.1rem', py: isMobile ? '2rem' : '8.5rem' }}>
+            <Box sx={{px: isMobile ? '1.2rem':'3.1rem', py: isMobile ? '4rem' : '8.5rem' }}>
 
                 <Box >
                     <Typography sx={{ color: '#838383', fontSize: isMobile ? '1.3rem' : '2.5rem', mb: 1 }} >01 Your website from A to Z.</Typography>

@@ -6,7 +6,7 @@ import UnisexClothing from './Component/UnisexClothing/UnisexClothing';
 import Accessories from './Component/Accessories/Accessories';
 import News from './Component/News/News';
 import InnerlandingPage from './Component/InnerLandingPage/InnerlandingPage';
-import SampleCarousel from './Component/InnerLandingPage/SampleCarousel';
+import Branding from './Component/Branding&WebDesign/Branding';
 
 
 
@@ -21,7 +21,7 @@ function App() {
           <Route path='/Accessories' element={<Accessories/>} />
           <Route path='/News' element={<News/>} />
           <Route path='/InnerLandingPage' element={<InnerlandingPage/>} />
-          <Route path='/Carousel' element={<SampleCarousel/>} />
+          <Route path='/Branding' element={<Branding/>} />
         </Routes>
       </BrowserRouter>
     </>

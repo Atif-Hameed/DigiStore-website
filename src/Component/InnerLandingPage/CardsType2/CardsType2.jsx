@@ -23,7 +23,7 @@ const CardStruct = (props) => {
                         {props.img}
                     </Box>
 
-                    <Box sx={{ display: 'flex', flexDirection: 'column', gap: isMobile ? 2 : 3, }}>
+                    <Box sx={{mt:isMobile ? 2 : 'normal', display: 'flex', flexDirection: 'column', gap: isMobile ? 2 : 3, }}>
 
                         <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.6, }}>
                             <Typography variant='h4' sx={{ fontSize: isMobile ? '1.25rem' : '2.5rem', color: '#fff', fontFamily: 'aeonik' }}>

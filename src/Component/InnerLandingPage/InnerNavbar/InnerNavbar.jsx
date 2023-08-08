@@ -1,17 +1,63 @@
-import { AppBar, Box, Button, Drawer, IconButton, List, ListItem, Typography, useMediaQuery, useTheme } from '@mui/material'
+import { AppBar, Box, Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Divider, Drawer, Grid, IconButton, List, ListItem, Typography, useMediaQuery, useTheme } from '@mui/material'
 import React from 'react'
 import Logo from '../../../asset/logo.svg'
 import MainLogo from '../../../asset/mainDigiLogo.svg'
 import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
 import '../index.css'
+import linkedLogo from '../../../asset/linkedInLogo.svg'
+import instaLogo from '../../../asset/instaLogo.svg'
+import tiktokLogo from '../../../asset/tiktokLogo.svg'
+import wLogo from '../../../asset/wBig.svg'
+import ytLogo from '../../../asset/ytLogo.svg'
+import figmaLogo from '../../../asset/figmaLogo.svg'
+import bigW from '../../../asset/wBig.svg'
+import team from '../../../asset/team.webp'
+import Certifcate from '../../../asset/certifIcon.svg'
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { useState } from 'react'
 import { Link } from 'react-router-dom';
 
 
 const InnerNavbar = () => {
 
+    //  FOR DIALOGUE - 1
+    const [open, setOpen] = useState(false)
+
+    const handleOpen = () => {
+        setOpen(true)
+    }
+
+    const handleClose = () => {
+        setOpen(false)
+    }
+
+    //  FOR DIALOGUE - 2
+    const [open2, setOpen2] = useState(false)
+
+    const handleOpen2 = () => {
+        setOpen2(true)
+    }
+
+    const handleClose2 = () => {
+        setOpen2(false)
+    }
+
+
+    //  FOR DIALOGUE - 3
+    const [open3, setOpen3] = useState(false)
+
+    const handleOpen3 = () => {
+        setOpen3(true)
+    }
+
+    const handleClose3 = () => {
+        setOpen3(false)
+    }
+
+
+    // FOR HOVER EFFECT
     const [isHover, setIsHover] = useState(false)
 
     const handleMouseEnter = () => {
@@ -22,6 +68,8 @@ const InnerNavbar = () => {
         setIsHover(false)
     }
 
+
+    // FOR DRAWER
     const [openDrawer, setOpenDrawer] = useState(false)
 
     const handleDrawer = () => {
@@ -34,17 +82,20 @@ const InnerNavbar = () => {
 
     return (
         <>
-            <AppBar elevation={0} sx={{ bgcolor: '#101010', pl: isMobile ? 2 : 6.3, pr: isMobile ? 2 : 5, py: 1.1 }} position={isMobile ? 'sticky' : 'fixed'} >
+            <AppBar elevation={0} sx={{ bgcolor: '#101010', pl: isMobile ? 2.3 : 6.3, pr: isMobile ? 1.8 : 5.3, py: isMobile ? 0.8 : 0.9 }} position={isMobile ? 'sticky' : 'fixed'} >
                 <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
 
                     <Box sx={{ display: 'flex', alignItems: 'center', gap: 3.5 }}>
-                        <Box >
-                            <img src={MainLogo} alt="" style={{width: '10.05rem'}}  />
+
+                        <Box mt={isMobile ? 'normal' : 0.8}>
+                            <Link to="/InnerLandingPage"  >
+                                <img src={MainLogo} alt="" style={{ width: isMobile ? '8.05rem' : '10.05rem' }} />
+                            </Link>
                         </Box>
+
                         <Box sx={{ display: isMobile ? 'none' : 'flex', alignItems: 'center', gap: 0 }}>
 
-                            <Link to='/Carousel' >
-                            <Box sx={{
+                            <Box onClick={handleOpen} sx={{
                                 py: 3.8, px: 2.5, display: 'flex', gap: 1.5, alignItems: 'center', cursor: 'pointer',
                                 '&:hover': {
                                     backgroundColor: '#ffffff0a',
@@ -54,9 +105,108 @@ const InnerNavbar = () => {
                                 <Typography sx={{ fontSize: '1.23rem', color: '#f8f8f8', fontFamily: 'aeonik-reg' }}>SERVICES</Typography>
                                 <ArrowDownwardIcon className='navBox1' sx={{ color: '#fff', opacity: 0, fontSize: '1.2rem' }} />
                             </Box>
-                            </Link>
 
-                            <Box sx={{
+
+                            {/* DIALOGUE - 1 */}
+                            <Dialog
+                                open={open}
+                                onClose={handleClose}
+                                disableScrollLock={true}
+                                autoFocus="false"
+                                fullScreen
+                                BackdropProps={{
+                                    style: {
+                                        backdropFilter: 'blur(8px)',
+                                        marginTop: '8rem',
+                                    }
+                                }}
+                                sx={{
+                                    '& .MuiDialog-paper': {
+                                        backgroundColor: '#101010',
+                                        height: '78%',
+                                        mt: '3rem',
+                                        p: 0,
+                                    },
+                                    '& .MuiDialogContent-root': {
+                                        padding: 0
+                                    }
+                                }}
+
+                            >
+
+                                <DialogContent sx={{ height: '100%' }}>
+
+                                    <Box px={6} height={'100%'}>
+                                        <Box sx={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} >
+
+                                            <Box sx={{ width: '62%', display: 'flex', gap: 7 }}>
+
+                                                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4.5 }}>
+
+                                                    <Link to="/Branding" style={{ textDecoration: 'none' }}>
+                                                        <Typography sx={{ "&:hover": { textDecoration: 'underline', color: '#fdd33c' }, color: '#f8f8f8', fontSize: '1.9rem', fontFamily: 'aeonik-reg', fontWeight: '500' }}>BRANDING & WEBDESIGN</Typography>
+                                                    </Link>
+
+                                                    <Link to="" style={{ textDecoration: 'none' }}>
+                                                        <Typography sx={{ "&:hover": { textDecoration: 'underline', color: '#fdd33c' }, color: '#f8f8f8', fontSize: '1.9rem', fontFamily: 'aeonik-reg', fontWeight: '500' }}>WEBFLOW WEBSITE</Typography>
+                                                    </Link>
+
+                                                    <Link to="" style={{ textDecoration: 'none' }}>
+                                                        <Typography sx={{ "&:hover": { textDecoration: 'underline', color: '#fdd33c' }, color: '#f8f8f8', fontSize: '1.9rem', fontFamily: 'aeonik-reg', fontWeight: '500' }}>TRAINING</Typography>
+                                                    </Link>
+
+                                                    <Link to="" style={{ textDecoration: 'none' }}>
+                                                        <Typography sx={{ "&:hover": { textDecoration: 'underline', color: '#fdd33c' }, color: '#f8f8f8', fontSize: '1.9rem', fontFamily: 'aeonik-reg', fontWeight: '500' }}>MAINTENANCE</Typography>
+                                                    </Link>
+
+                                                    <Link to="" style={{ textDecoration: 'none' }}>
+                                                        <Typography sx={{ "&:hover": { textDecoration: 'underline', color: '#fdd33c' }, color: '#f8f8f8', fontSize: '1.9rem', fontFamily: 'aeonik-reg', fontWeight: '500' }}>ENTERPRISE</Typography>
+                                                    </Link>
+
+                                                </Box>
+
+                                                <Box sx={{ width: '23.4rem', mt: 0.8, display: 'flex', flexDirection: 'column', gap: 2 }}>
+                                                    <Box sx={{ "&:hover": { color: '#fff', '& .arrow1': { color: '#fff' } }, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                                                        <Typography className='arrow1' sx={{ color: '#bebebe', fontSize: '1.2rem', fontFamily: 'aeonik' }}>All our services</Typography>
+                                                        <ArrowForwardIcon className='arrow1' sx={{ color: '#bebebe' }} />
+                                                    </Box>
+                                                    <Divider sx={{ bgcolor: '#4c4b49' }} />
+
+                                                    <Box sx={{ "&:hover": { color: '#fff', '& .arrow2': { color: '#fff' } }, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                                                        <Typography className='arrow2' sx={{ "&:hover": { color: '#fff' }, cursor: 'pointer', color: '#bebebe', fontSize: '1.2rem', fontFamily: 'aeonik' }}>La DigiCalidad</Typography>
+                                                        <ArrowForwardIcon className='arrow2' sx={{ color: '#bebebe' }} />
+                                                    </Box>
+                                                    <Divider sx={{ bgcolor: '#4c4b49' }} />
+                                                </Box>
+
+                                            </Box>
+
+                                            <Box sx={{ width: '38%', height: '100%' }}>
+                                                <Box sx={{ bgcolor: '#4353ff', height: '50%', position: 'relative' }}>
+                                                    <ArrowForwardIcon sx={{ fontSize: '2.5rem', color: '#fff', position: 'absolute', right: 20, top: 15 }} />
+                                                    <Box sx={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+                                                        <img src={bigW} width={'150rem'} alt="" />
+                                                        <Typography sx={{ color: '#fff', fontFamily: 'aeonik-reg', fontSize: '1.2rem' }} >Certified Webflow Expert</Typography>
+                                                    </Box>
+                                                </Box>
+                                                <Box sx={{ bgcolor: '#f8f8f8', height: '50%', position: 'relative' }}>
+                                                    <ArrowForwardIcon sx={{ fontSize: '2.5rem', color: '#000', position: 'absolute', right: 20, top: 15 }} />
+                                                    <Box sx={{ gap: 3, height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+                                                        <img src={Certifcate} width={'92rem'} alt="" />
+                                                        <Typography sx={{ color: '#000', fontFamily: 'aeonik-reg', fontSize: '1.2rem' }} >Client-First Ambassador</Typography>
+                                                    </Box>
+                                                </Box>
+                                            </Box>
+
+                                        </Box>
+                                    </Box>
+
+                                </DialogContent>
+
+                            </Dialog>
+
+
+                            <Box onClick={handleOpen2} sx={{
                                 py: 3.8, px: 2.5, display: 'flex', gap: 1.5, alignItems: 'center', cursor: 'pointer',
                                 '&:hover': {
                                     backgroundColor: '#ffffff0a',
@@ -67,7 +217,108 @@ const InnerNavbar = () => {
                                 <ArrowDownwardIcon className='navBox1' sx={{ color: '#fff', opacity: 0, fontSize: '1.2rem' }} />
                             </Box>
 
-                            <Box sx={{
+
+                            {/* DIALOGUE - 2 */}
+                            <Dialog
+                                open={open2}
+                                onClose={handleClose2}
+                                disableScrollLock={true}
+                                autoFocus="false"
+                                fullScreen
+                                BackdropProps={{
+                                    style: {
+                                        backdropFilter: 'blur(8px)',
+                                        marginTop: '8rem',
+                                    }
+                                }}
+                                sx={{
+                                    '& .MuiDialog-paper': {
+                                        backgroundColor: '#101010',
+                                        height: '76%',
+                                        mt: '3rem',
+                                        p: 0,
+                                    },
+                                    '& .MuiDialogContent-root': {
+                                        padding: 0
+                                    }
+                                }}
+
+                            >
+
+                                <DialogContent sx={{ height: '100%' }}>
+
+                                    <Box px={6} height={'100%'}>
+                                        <Box sx={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} >
+
+                                            <Box sx={{ width: '62%', display: 'flex', justifyContent: 'space-between' }}>
+
+                                                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4.5 }}>
+
+                                                    <Link to="" style={{ textDecoration: 'none' }}>
+                                                        <Typography sx={{ "&:hover": { textDecoration: 'underline', color: '#fdd33c' }, color: '#f8f8f8', fontSize: '1.9rem', fontFamily: 'aeonik-reg', fontWeight: '500' }}>HISTORY</Typography>
+                                                    </Link>
+
+                                                    <Link to="" style={{ textDecoration: 'none' }}>
+                                                        <Typography sx={{ "&:hover": { textDecoration: 'underline', color: '#fdd33c' }, color: '#f8f8f8', fontSize: '1.9rem', fontFamily: 'aeonik-reg', fontWeight: '500' }}>TEAM</Typography>
+                                                    </Link>
+
+                                                    <Link to="" style={{ textDecoration: 'none' }}>
+                                                        <Typography sx={{ "&:hover": { textDecoration: 'underline', color: '#fdd33c' }, color: '#f8f8f8', fontSize: '1.9rem', fontFamily: 'aeonik-reg', fontWeight: '500' }}>STUDIO</Typography>
+                                                    </Link>
+
+                                                    <Link to="" style={{ textDecoration: 'none' }}>
+                                                        <Typography sx={{ "&:hover": { textDecoration: 'underline', color: '#fdd33c' }, color: '#f8f8f8', fontSize: '1.9rem', fontFamily: 'aeonik-reg', fontWeight: '500' }}>JOIN US</Typography>
+                                                    </Link>
+
+                                                    <Link to="" style={{ textDecoration: 'none' }}>
+                                                        <Typography sx={{ "&:hover": { textDecoration: 'underline', color: '#fdd33c' }, color: '#f8f8f8', fontSize: '1.9rem', fontFamily: 'aeonik-reg', fontWeight: '500' }}>NEWS</Typography>
+                                                    </Link>
+
+                                                </Box>
+
+                                                <Box sx={{ mr: 15, width: '23.4rem', mt: 0.8, display: 'flex', flexDirection: 'column', gap: 2 }}>
+                                                    <Box sx={{ "&:hover": { color: '#fff', '& .arrow1': { color: '#fff' } }, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                                                        <Typography className='arrow1' sx={{ color: '#bebebe', fontSize: '1.2rem', fontFamily: 'aeonik' }}>Why Digidop ?</Typography>
+                                                        <ArrowForwardIcon className='arrow1' sx={{ color: '#bebebe' }} />
+                                                    </Box>
+                                                    <Divider sx={{ bgcolor: '#4c4b49' }} />
+
+                                                    <Box sx={{ "&:hover": { color: '#fff', '& .arrow1': { color: '#fff' } }, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                                                        <Typography className='arrow1' sx={{ color: '#bebebe', fontSize: '1.2rem', fontFamily: 'aeonik' }}>Why Webflow ?</Typography>
+                                                        <ArrowForwardIcon className='arrow1' sx={{ color: '#bebebe' }} />
+                                                    </Box>
+                                                    <Divider sx={{ bgcolor: '#4c4b49' }} />
+
+                                                    <Box sx={{ "&:hover": { color: '#fff', '& .arrow2': { color: '#fff' } }, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                                                        <Typography className='arrow2' sx={{ "&:hover": { color: '#fff' }, cursor: 'pointer', color: '#bebebe', fontSize: '1.2rem', fontFamily: 'aeonik' }}>Why Figma?</Typography>
+                                                        <ArrowForwardIcon className='arrow2' sx={{ color: '#bebebe' }} />
+                                                    </Box>
+                                                    <Divider sx={{ bgcolor: '#4c4b49' }} />
+                                                </Box>
+
+                                            </Box>
+
+
+                                            <Box sx={{ width: '38%', height: '100%', position: 'relative' }}>
+                                                <Box height={'100%'} overflow={'hidden'}>
+                                                    <img src={team} width={''} height={'100%'} alt="" />
+                                                </Box>
+                                                <Box sx={{ display: 'flex', gap: 0.6, alignItems: 'center', px: 1, py: 1.1, bgcolor: '#fff', position: 'absolute', right: 0, bottom: 0 }}>
+                                                    <Typography sx={{ fontSize: '1.3rem', fontFamily: 'aeonik', color: '#000' }}>Discover the agency</Typography>
+                                                    <ArrowForwardIcon sx={{ color: '#000', fontSize: '1.3rem' }} />
+                                                </Box>
+                                            </Box>
+
+                                        </Box>
+                                    </Box>
+
+                                </DialogContent>
+
+                            </Dialog>
+
+
+
+                            <Box onClick={handleOpen3} sx={{
                                 py: 3.8, px: 2.5, display: 'flex', gap: 1.5, alignItems: 'center', cursor: 'pointer',
                                 '&:hover': {
                                     backgroundColor: '#ffffff0a',
@@ -78,11 +329,117 @@ const InnerNavbar = () => {
                                 <ArrowDownwardIcon className='navBox1' sx={{ color: '#fff', opacity: 0, fontSize: '1.2rem' }} />
                             </Box>
 
+
+                            {/* DIALOGUE -3 */}
+                            <Dialog
+                                open={open3}
+                                onClose={handleClose3}
+                                disableScrollLock={true}
+                                autoFocus="false"
+                                fullScreen
+                                BackdropProps={{
+                                    style: {
+                                        backdropFilter: 'blur(8px)',
+                                        marginTop: '8rem',
+                                    }
+                                }}
+                                sx={{
+                                    '& .MuiDialog-paper': {
+                                        backgroundColor: '#101010',
+                                        height: '78%',
+                                        mt: '3rem',
+                                        p: 0,
+                                    },
+                                    '& .MuiDialogContent-root': {
+                                        padding: 0
+                                    }
+                                }}
+
+                            >
+
+                                <DialogContent sx={{ height: '100%' }}>
+
+                                    <Box pl={6} height={'100%'}>
+                                        <Box sx={{ width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }} >
+
+                                            <Box sx={{ width: '56%', display: 'flex', gap: 7 }}>
+
+                                                <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4.5 }}>
+
+                                                    <Link to="" style={{ textDecoration: 'none' }}>
+                                                        <Typography sx={{ "&:hover": { textDecoration: 'underline', color: '#fdd33c' }, color: '#f8f8f8', fontSize: '1.9rem', fontFamily: 'aeonik-reg', fontWeight: '500' }}>BLOG</Typography>
+                                                    </Link>
+
+                                                    <Link to="" style={{ textDecoration: 'none' }}>
+                                                        <Typography sx={{ "&:hover": { textDecoration: 'underline', color: '#fdd33c' }, color: '#f8f8f8', fontSize: '1.9rem', fontFamily: 'aeonik-reg', fontWeight: '500' }}>DIGIDOP ACADEMY</Typography>
+                                                    </Link>
+
+                                                    <Link to="" style={{ textDecoration: 'none' }}>
+                                                        <Typography sx={{ "&:hover": { textDecoration: 'underline', color: '#fdd33c' }, color: '#f8f8f8', fontSize: '1.9rem', fontFamily: 'aeonik-reg', fontWeight: '500' }}>TUTORIALS</Typography>
+                                                    </Link>
+
+                                                    <Link to="" style={{ textDecoration: 'none' }}>
+                                                        <Typography sx={{ "&:hover": { textDecoration: 'underline', color: '#fdd33c' }, color: '#f8f8f8', fontSize: '1.9rem', fontFamily: 'aeonik-reg', fontWeight: '500' }}>TEMPLATES</Typography>
+                                                    </Link>
+
+                                                    <Link to="" style={{ textDecoration: 'none' }}>
+                                                        <Typography sx={{ "&:hover": { textDecoration: 'underline', color: '#fdd33c' }, color: '#f8f8f8', fontSize: '1.9rem', fontFamily: 'aeonik-reg', fontWeight: '500' }}>FAVORITE TOOLS</Typography>
+                                                    </Link>
+
+                                                </Box>
+
+
+                                            </Box>
+
+                                            <Box sx={{ width: '46%', height: '100%' }}>
+                                                <Box sx={{ width: '100%', height: '100%', bgcolor: '#181818', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }} >
+                                                    <Box sx={{ mt: 12, ml: 10, width: "81%", display: 'flex', flexDirection: 'column', gap: 1.9 }}>
+                                                        <Box sx={{ "&:hover": { color: '#fff', '& .arrow4': { color: '#fff' } }, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                                                            <Typography className='arrow4' sx={{ color: '#bebebe', fontSize: '1.2rem', fontFamily: 'aeonik' }}>Webflow documentation</Typography>
+                                                            <ArrowForwardIcon className='arrow4' sx={{ color: '#bebebe' }} />
+                                                        </Box>
+                                                        <Divider sx={{ bgcolor: '#4c4b49' }} />
+
+                                                        <Box sx={{ "&:hover": { color: '#fff', '& .arrow5': { color: '#fff' } }, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                                                            <Typography className='arrow5' sx={{ color: '#bebebe', fontSize: '1.2rem', fontFamily: 'aeonik' }}>Figma documentation</Typography>
+                                                            <ArrowForwardIcon className='arrow5' sx={{ color: '#bebebe' }} />
+                                                        </Box>
+                                                        <Divider sx={{ bgcolor: '#4c4b49' }} />
+
+                                                        <Box sx={{ "&:hover": { color: '#fff', '& .arrow6': { color: '#fff' } }, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                                                            <Typography className='arrow6' sx={{ color: '#bebebe', fontSize: '1.2rem', fontFamily: 'aeonik' }}>Client-First Documentation</Typography>
+                                                            <ArrowForwardIcon className='arrow6' sx={{ color: '#bebebe' }} />
+                                                        </Box>
+                                                        <Divider sx={{ bgcolor: '#4c4b49' }} />
+                                                    </Box>
+
+                                                    <Box sx={{ mb: 10, ml: 10, width: "81%", display: 'flex', flexDirection: isMobile ? 'column' : 'row', alignItems: isMobile ? 'start' : 'center' }}>
+                                                        <Box sx={{ display: 'flex', alignItems: 'center', gap: isMobile ? 3.2 : 3.8 }}>
+                                                            <img src={linkedLogo} width={isMobile ? '25rem' : '33rem'} alt="" />
+                                                            <img src={tiktokLogo} width={isMobile ? '25rem' : '33rem'} alt="" />
+                                                            <img src={instaLogo} width={isMobile ? '25rem' : '33rem'} alt="" />
+                                                            <img src={ytLogo} width={isMobile ? '25.5rem' : ''} alt="" />
+                                                            <img src={wLogo} width={isMobile ? '25rem' : '33rem'} alt="" />
+                                                            <img src={figmaLogo} width={isMobile ? '18.5rem' : '23rem'} alt="" />
+                                                        </Box>
+                                                    </Box>
+                                                </Box>
+                                            </Box>
+
+                                        </Box>
+                                    </Box>
+
+                                </DialogContent>
+
+                            </Dialog>
+
+
+
                         </Box>
                     </Box>
 
-                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                      
+                    <Box sx={{ display: 'flex', alignItems: 'center', gap: isMobile ? 0 : 2 }}>
+
                         <Box sx={{ display: isMobile ? 'none' : 'flex', alignItems: 'center', gap: 2.7 }}>
 
                             <Box sx={{
@@ -99,13 +456,13 @@ const InnerNavbar = () => {
                                 Contact us
                             </Button>
                         </Box>
-                      
-                        <Button sx={{ color: '#fff', fontSize: '1.06rem', fontFamily: 'aeonik-reg', fontWeight: 'bold' }}>
+
+                        <Button sx={{ mb: isMobile ? 1 : 'normal', color: '#fff', fontSize: isMobile ? '0.9rem' : '1.06rem', fontFamily: 'aeonik-reg', fontWeight: 'bold' }}>
                             EN
                         </Button>
 
                         <IconButton onClick={handleDrawer} sx={{ display: isMobile ? 'initial' : 'none' }} >
-                            <MenuIcon sx={{ color: '#fff', fontSize:'2.2rem' }} />
+                            <MenuIcon sx={{ color: '#fff', fontSize: '2.2rem' }} />
                         </IconButton>
 
                         <Drawer open={openDrawer} onClose={() => setOpenDrawer(false)}>
