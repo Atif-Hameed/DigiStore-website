@@ -8,6 +8,9 @@ import GoogleIcon from '../../asset/GoogleIcon.svg'
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import Footer from '../InnerLandingPage/Footer/Footer'
 import StructQuestions from '../InnerLandingPage/Q&A/StructQuestions'
+import Header from './Header'
+import Desgins from './Desgins'
+import StructServices from './Services/StructServices'
 
 
 const Branding = () => {
@@ -19,9 +22,21 @@ const Branding = () => {
     return (
         <>
             <Box sx={{ bgcolor: '#101010', position: 'relative' }}>
+                
                 <InnerNavbar />
 
-                <StructLogos />
+                <Box mt={12.5}>
+                    <Header/>
+                </Box>
+
+
+                <StructLogos
+                padding={isMobile ? 11 : 15.3}
+                />
+
+                <Desgins/>
+
+                <StructServices/>
 
                 <StructWebPractices />
 

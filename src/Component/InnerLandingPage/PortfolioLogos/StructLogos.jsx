@@ -46,7 +46,8 @@ const StructLogos = (props) => {
 
     return (
         <>
-            <Box sx={{ pt: isMobile ? '7rem' : '11rem', pb: isMobile ? '4rem' : '11rem' }}>
+        {/* pt:isMobile ? '7rem' : '11rem', */}
+            <Box pt={props.padding} sx={{ pb: isMobile ? '4rem' : '11rem' }}>
                 
                 {props.hading}
 

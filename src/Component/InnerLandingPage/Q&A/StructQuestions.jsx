@@ -24,14 +24,16 @@ const AccordionStruct = (props) => {
         <>
             <Accordion expanded={expanded} square={true} onChange={handleExpand} sx={{ backgroundColor: 'transparent', pb: isMobile ? '0.4rem' : '1.4rem', pt: '1.5rem', borderBottom: '1.5px solid #838383', borderLeft: 'none', borderBottomLeftRadius: '0', boxShadow: 'none', '&:before': { display: 'none' } }}>
                 <AccordionSummary sx={{ p: 0 }}
-                    expandIcon={expanded ? <AddIcon sx={{ transform: 'rotate(45deg)', transition: 'all 0.3s ease', fontSize: '2.5rem', color: '#181818' }} /> : <AddIcon sx={{ fontSize: isMobile ? '2rem' : '2.5rem', color: '#181818' }} />}
+                    // expandIcon=
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                 >
-                    <Typography sx={{ fontFamily: 'aeonik-reg', fontSize: isMobile ? '1.2rem' : '1.85rem' }} >
-                        {props.Question}
-
-                    </Typography>
+                    <Box sx={{width:'100%', display:'flex',alignItems:'center', justifyContent:'space-between'}}>
+                        <Typography sx={{ fontFamily: 'aeonik-reg', fontSize: isMobile ? '1.2rem' : '1.85rem' }} >
+                            {props.Question}
+                        </Typography>
+                        {expanded ? <AddIcon sx={{ transform: 'rotate(45deg)', transition: 'all 0.3s ease', fontSize: '2.5rem', color: '#181818' }} /> : <AddIcon sx={{ fontSize: isMobile ? '2rem' : '2.5rem',transition: 'all 0.3s ease', color: '#181818' }} />}
+                    </Box>
                 </AccordionSummary>
                 <AccordionDetails sx={{ p: 0 }}>
                     <Typography>
@@ -109,7 +111,7 @@ const StructQuestions = (props) => {
                     />
 
                     <AccordionStruct
-                        Question= {props.Question2}
+                        Question={props.Question2}
                         Details={
                             <Box>
                                 <Typography sx={{ fontFamily: 'aeonik', fontSize: isMobile ? '1.14rem' : '1.4rem', mt: 3 }}>
@@ -126,7 +128,7 @@ const StructQuestions = (props) => {
                     />
 
                     <AccordionStruct
-                        Question= {props.Question3}
+                        Question={props.Question3}
                         Details={<>
                             <Typography sx={{ fontFamily: 'aeonik', fontSize: isMobile ? '1.14rem' : '1.4rem', mt: 3 }}>It depends on many elements such as the size of your site, your graphic design needs, the complexity of the animations, your additional needs (filtering, blog, automation, advanced features, custom code, etc.).</Typography>
                             <Typography sx={{ fontFamily: 'aeonik', fontSize: isMobile ? '1.14rem' : '1.4rem', mt: 3 }}>Thanks to our reactive team, we can say that on average it takes <b>1.5 months</b> between the date of signature and the launch of the Webflow site.</Typography>
@@ -134,7 +136,7 @@ const StructQuestions = (props) => {
                     />
 
                     <AccordionStruct
-                        Question= {props.Question4}
+                        Question={props.Question4}
                         Details={<>
                             <Typography sx={{ fontFamily: 'aeonik', fontSize: isMobile ? '1.14rem' : '1.4rem', mt: 3 }}>There is no fixed price, because each project has specific needs. At Digidop the creation of a website is not only about development.</Typography>
                             <Typography sx={{ fontFamily: 'aeonik', fontSize: isMobile ? '1.14rem' : '1.4rem', mt: 3 }}>This is achieved through :</Typography>
@@ -199,7 +201,7 @@ const StructQuestions = (props) => {
                     />
 
                     <AccordionStruct
-                        Question= {props.Question5}
+                        Question={props.Question5}
                         Details={<>
                             <Typography sx={{ fontFamily: 'aeonik', fontSize: isMobile ? '1.14rem' : '1.4rem' }} >
                                 There are many elements to take into account to achieve a successful site and build

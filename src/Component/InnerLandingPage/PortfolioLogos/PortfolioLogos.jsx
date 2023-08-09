@@ -16,6 +16,7 @@ const PortfolioLogos = () => {
     return (
         <>
             <StructLogos
+            padding={isMobile? 10 : 15}
                 hading={<>
                     <Box sx={{ bgcolor: '#fdd33c', py: isMobile ? 3.6 : 7, px: isMobile ? 2.5 : 6.2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                         <Typography sx={{ color: '#181818', fontFamily: 'aeonik-reg', fontSize: isMobile ? '2rem' : '3.7rem', fontWeight: '500' }}>See our portfolio</Typography>
