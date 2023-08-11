@@ -1,96 +1,86 @@
-import { Accordion, AccordionDetails, AccordionSummary, Box, Typography } from '@mui/material'
+import { Accordion, AccordionDetails, AccordionSummary, Box, Grid, Typography, useMediaQuery, useTheme } from '@mui/material'
 import React from 'react'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { useState } from 'react';
-import img1 from '../../../asset/tickImg.svg'
+import SvgImg1 from '../../../asset/SvgEdited/EditSvg1.svg'
+import SvgImg1Colored from '../../../asset/SvgEdited/EditSvg1Colored.svg'
+import SvgImg2 from '../../../asset/SvgEdited/EditSvg2.svg'
+import SvgImg2Colored from '../../../asset/SvgEdited/EditSvg2Colored.svg'
+import SvgImg3 from '../../../asset/SvgEdited/EditSvg3.svg'
+import SvgImg3Colored from '../../../asset/SvgEdited/EditSvg3Colored.svg'
+import SvgImg4 from '../../../asset/SvgEdited/EditSvg4.svg'
+import SvgImg4Colored from '../../../asset/SvgEdited/EditSvg4Colored.svg'
+import SvgImg5 from '../../../asset/SvgEdited/EditSvg5.svg'
+import SvgImg5Colored from '../../../asset/SvgEdited/EditSvg5Colored.svg'
+import SvgImg6 from '../../../asset/SvgEdited/EditSvg6.svg'
+import SvgImg6Colored from '../../../asset/SvgEdited/EditSvg6Colored.svg'
+
+
 import Accordians from './Accordians';
+import NextLvlBox from './NextLvlBox';
 
 
-const StructServices = () => {
+const StructServices = (props) => {
 
-    const [Expanded, setExpended] = useState(false)
-
-    const handleExpand = () => {
-        setExpended((prev) => !prev)
-    }
+    const theme = useTheme()
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
 
     return (
         <>
-            <Box px={6}>
-                <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                    <Box width={'45%'}>
-                        <Typography sx={{ fontSize: '3.7rem', fontFamily: 'aeonik-reg', color: '#f1f1f1', lineHeight: '5rem' }}>
-                            Our branding and web-design services (figma)
+            <Box px={isMobile ? 2.5 :6} py={17} id="scrollTarget">
+                <Box sx={{ display: 'flex', justifyContent: 'space-between', flexDirection:isMobile ? 'column' : 'row', gap:isMobile? 6 : 'normal' }}>
+                    <Box width={isMobile ? '100%':'45%'}>
+                        <Typography sx={{ fontSize: isMobile ? '2rem': '3.7rem', fontFamily: 'aeonik-reg', color: '#f1f1f1', lineHeight:isMobile ? 'normal': '5rem' }}>
+                            {props.UpperHeading}
                         </Typography>
                     </Box>
 
-                    <Box sx={{ display: 'flex', alignItems: 'center', alignSelf: 'end', gap: 1 }}>
-                        <Typography sx={{ fontSize: '1.3rem', fontFamily: 'aeonik-reg', color: '#f1f1f1' }}>
-                            BACK TO OUR OFFERS
+                    <Box sx={{ mb: 2, pr: 3.5, pl:isMobile ? 3:'normal', display: 'flex', alignItems: 'center', alignSelf:isMobile ? 'start':'end', gap: 1 }}>
+                        <Typography sx={{ fontSize:isMobile ? '1.1rem': '1.3rem', fontFamily: 'aeonik-reg', color: '#fff' }}>
+                            {props.UpperOption}
                         </Typography>
-                        <ArrowForwardIcon sx={{ fontSize: '2.5rem', color: '#f1f1f1' }} />
+                        <ArrowForwardIcon sx={{ fontSize:isMobile ? '2rem': '2.5rem', color: '#f1f1f1' }} />
                     </Box>
+                </Box>
+
+                <Box mt={isMobile ? 6: 12}>
+                    <Accordians
+                        svgImg1={<img src={SvgImg1} width={'60rem'} />}
+                        svgImg2={<img src={SvgImg1Colored} width={'60rem'} />}
+                        mainHeading='Sprint Design'
+                    />
+                    <Accordians
+                        svgImg1={<img src={SvgImg2} width={'60rem'} />}
+                        svgImg2={<img src={SvgImg2Colored} width={'60rem'} />}
+                        mainHeading='Corporate identity'
+                    />
+                    <Accordians
+                        svgImg1={<img src={SvgImg3} width={'60rem'} />}
+                        svgImg2={<img src={SvgImg3Colored} width={'60rem'} />}
+                        mainHeading='Wireframing / UX'
+                    />
+                    <Accordians
+                        svgImg1={<img src={SvgImg4} width={'60rem'} />}
+                        svgImg2={<img src={SvgImg4Colored} width={'60rem'} />}
+                        mainHeading='Prototyping / UI'
+                    />
+                    <Accordians
+                        svgImg1={<img src={SvgImg5} width={'60rem'} />}
+                        svgImg2={<img src={SvgImg5Colored} width={'60rem'} />}
+                        mainHeading='Design System'
+                    />
+                    <Accordians
+                        svgImg1={<img src={SvgImg6} width={'60rem'} />}
+                        svgImg2={<img src={SvgImg6Colored} width={'60rem'} />}
+                        mainHeading='Component library'
+                    />
                 </Box>
 
                 <Box mt={10}>
-                    {/* <Accordion
-                        square={true} disableGutters={true} elevation={false} expanded={Expanded} onChange={handleExpand}
-                        sx={{ bgcolor: Expanded ? '#181818' : 'transparent', borderTop: '1px solid ', borderColor: Expanded ? '#222' : '#838383',  }}
-                    >
-                        <AccordionSummary sx={{ pt: 1, pb:3.5, px:0 }}>
-                            <Box sx={{ width: '100%', display: 'flex', gap: 2, alignItems: 'center', justifyContent: 'space-between' }}>
-                                <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
-                                    <img src={img1} style={{fill:'#fff'}} width={'60rem'} alt="" />
-                                    <Typography sx={{ fontSize: '3.3rem', fontFamily:'aeonik-reg', color: Expanded ? '#fdd33c' : '#fff' }} >Sprint Design</Typography>
-                                </Box>
-                                {Expanded ? <ArrowForwardIcon sx={{ color: '#fdd33c', fontSize: '4.8rem', transform: 'rotate(90deg)', transition: 'all 0.3s ease' }} /> : <ArrowForwardIcon sx={{ fontSize: '4.8rem', color: '#fff', transform: 'rotate(45deg)', transition: 'all 0.3s ease' }} />}
-                            </Box>
-
-                        </AccordionSummary>
-                        <AccordionDetails>
-                            <Box>
-                                <Box sx={{ py: 2.5, display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', borderTop: '1px solid #222'}}>
-                                    <Box width={'50%'} sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-                                        <Typography sx={{ color: '#fff', fontSize: '1.5rem' }}>01</Typography>
-                                        <Typography sx={{ color: '#fff', fontSize: '1.5rem' }}>Understanding of needs</Typography>
-                                    </Box>
-                                    <Typography width={'50%'} sx={{ color: '#fff', fontSize: '1.3rem' }}>We discuss with your teams to understand your business and commercial issues, the project objectives, the operational means and the constraints.</Typography>
-                                </Box>
-                                <Box sx={{ py: 2.5, display: 'flex', alignItems: 'baseline', justifyContent: 'space-between',borderTop: '1px solid #222'}}>
-                                    <Box width={'50%'} sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-                                        <Typography sx={{ color: '#fff', fontSize: '1.5rem' }}>02</Typography>
-                                        <Typography sx={{ color: '#fff', fontSize: '1.5rem' }}>Market analysis</Typography>
-                                    </Box>
-                                    <Typography width={'50%'} sx={{ color: '#fff', fontSize: '1.3rem' }}>We conduct a thorough market analysis to
-                                        understand our clients' business and competitive environment. We examine market trends, direct and indirect
-                                        competitors, as well as opportunities and threats to the business. This analysis allows us to better
-                                        understand user expectations and create a solution that stands out in the market.</Typography>
-                                </Box>
-                                <Box sx={{ py: 2.5, display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', borderTop: '1px solid #222'}}>
-                                    <Box width={'50%'} sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-                                        <Typography sx={{ color: '#fff', fontSize: '1.5rem' }}>03</Typography>
-                                        <Typography sx={{ color: '#fff', fontSize: '1.5rem' }}>Search for references and inspirations</Typography>
-                                    </Box>
-                                    <Typography width={'50%'} sx={{ color: '#fff', fontSize: '1.3rem' }}>We study and explore a variety of sources of
-                                    inspiration to create unique and innovative design ideas. Analyzing industry trends, similar industry
-                                    designs, and our clients' web references allows us to come up with original and creative ideas for
-                                    future branding.</Typography>
-                                </Box>
-                                <Box sx={{ py: 2.5, display: 'flex', alignItems: 'baseline', justifyContent: 'space-between',borderTop: '1px solid #222'}}>
-                                    <Box width={'50%'} sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-                                        <Typography sx={{ color: '#fff', fontSize: '1.5rem' }}>04</Typography>
-                                        <Typography sx={{ color: '#fff', fontSize: '1.5rem' }}>Information architecture</Typography>
-                                    </Box>
-                                    <Typography width={'50%'} sx={{ color: '#fff', fontSize: '1.3rem' }}>We define and structure the important pages of
-                                    the site on a FigJam, using the information gathered in the previous steps. We work to create a clear, logical
-                                    structure that is designed for both SEO and conversion. The use of mind maps and wireframes allows us to organize
-                                    the information and define the hierarchy of the website navigation.</Typography>
-                                </Box>
-                            </Box>
-                        </AccordionDetails>
-                    </Accordion> */}
-                    <Accordians/>
+                    <NextLvlBox/>
                 </Box>
+                
             </Box>
         </>
     )

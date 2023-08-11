@@ -373,8 +373,8 @@ const InnerNavbar = () => {
                                         </ListItem>
 
                                         <ListItem sx={{ py: 0 }}>
-                                            <Box width={'100%'}>
-                                                <Accordion expanded={expanded} onChange={handleExpand} sx={{ bgcolor: '#000' }}>
+                                            <Box width={'100%'} overflow={'scroll'}>
+                                                <Accordion expanded={expanded} onChange={handleExpand} sx={{ bgcolor: '#000', overflowY:'scroll' }}>
                                                     <AccordionSummary
                                                         aria-controls="panel1a-content"
                                                         id="panel1a-header"
@@ -397,7 +397,7 @@ const InnerNavbar = () => {
 
                                         <ListItem sx={{ py: 0 }}>
                                             <Box width={'100%'}>
-                                                <Accordion expanded={expanded2} onChange={handleExpand2} sx={{ bgcolor: '#000' }}>
+                                                <Accordion expanded={expanded2} onChange={handleExpand2} sx={{ bgcolor: '#000', overflowY:'scroll' }}>
                                                     <AccordionSummary
                                                         aria-controls="panel1a-content"
                                                         id="panel1a-header"
@@ -420,7 +420,7 @@ const InnerNavbar = () => {
 
                                         <ListItem>
                                             <Box width={'100%'}>
-                                                <Accordion expanded={expanded3} onChange={handleExpand3} sx={{ bgcolor: '#000' }}>
+                                                <Accordion expanded={expanded3} onChange={handleExpand3} sx={{ bgcolor: '#000', overflowY:'scroll'}}>
                                                     <AccordionSummary
                                                         aria-controls="panel1a-content"
                                                         id="panel1a-header"

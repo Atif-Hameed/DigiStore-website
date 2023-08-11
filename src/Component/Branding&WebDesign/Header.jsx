@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Menu, MenuItem, Typography } from '@mui/material'
+import { Box, Button, Grid, Menu, MenuItem, Typography, useMediaQuery, useTheme } from '@mui/material'
 import React, { useEffect, useState } from 'react'
 import '../InnerLandingPage/index.css'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -9,12 +9,6 @@ import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
 const Header = () => {
 
-    // const [open, setOpen] = useState(false)
-
-    // const handleClick = () => {
-    //     setOpen((prev) => !prev)
-    // }
-
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const handleClick = (event) => {
@@ -24,15 +18,19 @@ const Header = () => {
         setAnchorEl(null);
     };
 
+    const theme = useTheme()
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+
     return (
         <>
             <Grid container spacing={5}>
-                <Grid item xs={6.75}>
-                    <Box sx={{pt:10, pl: 6.5, display: 'flex', flexDirection: 'column', alignItems: 'start' }}>
+                <Grid item lg={6.75} sm={12}>
+                    <Box sx={{pt: isMobile ? 0 : 10, pl: isMobile ? 2.5 : 6.5, display: 'flex', flexDirection: 'column', alignItems: 'start' }}>
 
-                        <Button onClick={handleClick} disableRipple sx={{ borderRadius: '0', border: 'none', bgcolor: '#181818', display: 'flex', gap: 4, py: 1.8, pr: 2,pl:2.5, '&:hover': { backgroundColor: '#222' } }}>
-                            <Typography sx={{ color: '#f8f8f8', fontFamily: 'aeonik-reg', fontSize: '1.25rem' }} >DESIGN FIGMA</Typography>
-                            <ExpandMoreIcon sx={{ color: '#f8f8f8', fontSize: '2rem' }} />
+                        <Button onClick={handleClick} disableRipple sx={{py: isMobile ? 1.5 : 1.8, pr: isMobile ? 1.5 : 2, pl: isMobile ? 2 :2.5, borderRadius: '0', border: 'none', bgcolor: '#181818', display: 'flex', gap:isMobile ? 3 : 4,  '&:hover': { backgroundColor: '#222' } }}>
+                            <Typography sx={{ color: '#f8f8f8', fontFamily: 'aeonik-reg', fontSize: isMobile ? '1rem':'1.25rem' }} >DESIGN FIGMA</Typography>
+                            <ExpandMoreIcon sx={{ color: '#f8f8f8', fontSize:isMobile ? '1.7rem':'2rem' }} />
                         </Button>
                         <Menu
                             id="basic-menu"
@@ -76,25 +74,25 @@ const Header = () => {
 
                         </Menu>
 
-                        <Box mt={10}>
-                            <Typography sx={{ fontFamily: 'aeonik', fontSize: '5rem', color: '#fff', lineHeight: '6.5rem' }}>
+                        <Box mt={isMobile ? 8 : 10}>
+                            <Typography sx={{pr:isMobile ? 2 :'normal', fontFamily: 'aeonik', fontSize: isMobile ? '2.45rem':'5rem', color: '#fff', lineHeight: isMobile ? '3.3rem':'6.5rem' }}>
                                 Design on Figma for an optimal user experience
                             </Typography>
                         </Box>
 
-                        <Box mt={5} sx={{display:'flex', flexDirection:'column', gap:10}}>
-                            <Box ml={2}>
-                            <img  src={figmaImg} width={'70rem'} alt="" />
+                        <Box mt={isMobile ? 4 : 5} sx={{display:'flex', flexDirection:'column', gap: isMobile ? 7 : 10}}>
+                            <Box ml={isMobile ? 1 : 2}>
+                            <img  src={figmaImg} width={isMobile ? '37rem' :'70rem'} alt="" />
                             </Box>
-                            <ArrowDownwardIcon sx={{ color: '#fff', fontSize: '3.3rem' }} />
+                            <ArrowDownwardIcon sx={{ color: '#fff', fontSize:isMobile ? '2.7rem' : '3.3rem' }} />
                         </Box>
 
                     </Box>
                 </Grid>
 
-                <Grid item xs={5.25} width={'100%'}>
-                    <Box sx={{width:'100%', height:'75%', bgcolor:'#fdd33c', display:'flex', flexDirection:'column', justifyContent:'center'}}>
-                        <Box sx={{width:'33.35rem', height:'26.4rem'}}>
+                <Grid item lg={5.25} sm={12} width={'100%'}>
+                    <Box sx={{width:'100%', height:isMobile? '26rem':'75%', bgcolor:'#fdd33c', display:'flex', flexDirection:'column', justifyContent: isMobile ? 'end':'center'}}>
+                        <Box sx={{width: isMobile ? '19rem' : '33.35rem', height:isMobile ? '21rem':'26.4rem'}}>
                             <Box
                             sx={{
                                 width:'100%',
@@ -105,7 +103,7 @@ const Header = () => {
                                 position:'relative'
                             }}
                             >
-                                <img style={{position:'absolute',bottom:-55,left:'24.5%'}} width={'250rem'} src={pointer} alt="" />
+                                <img style={{position:'absolute',bottom:isMobile ? 20:-55,left:'24.5%'}} width={isMobile ? '200rem':'250rem'} src={pointer} alt="" />
                             </Box>
                         </Box>
                     </Box>
