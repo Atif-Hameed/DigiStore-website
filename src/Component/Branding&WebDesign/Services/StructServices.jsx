@@ -14,8 +14,6 @@ import SvgImg5 from '../../../asset/SvgEdited/EditSvg5.svg'
 import SvgImg5Colored from '../../../asset/SvgEdited/EditSvg5Colored.svg'
 import SvgImg6 from '../../../asset/SvgEdited/EditSvg6.svg'
 import SvgImg6Colored from '../../../asset/SvgEdited/EditSvg6Colored.svg'
-
-
 import Accordians from './Accordians';
 import NextLvlBox from './NextLvlBox';
 

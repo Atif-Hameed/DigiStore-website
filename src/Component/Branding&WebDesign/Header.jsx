@@ -57,18 +57,18 @@ const Header = () => {
                         >
                             <Box sx={{ display: 'flex', flexDirection: 'column', bgcolor: '#222', width: 'fit-content' }}>
                                 <MenuItem disableGutters>
-                                    <Typography sx={{ width: '100%', px: 2, py: 2, m: 0, '&:hover': { border: '1px solid #fdc33c', color: '#fdc33c' }, cursor: 'pointer', fontSize: '1.2rem', fontFamily: 'aeonik', color: '#f8f8f8' }}>Webflow Development</Typography>
+                                    <Typography sx={{ width: '100%', px: isMobile ? 1.5 : 2, py:isMobile ? 1.5 : 2, m: 0, '&:hover': { border: '1px solid #fdc33c', color: '#fdc33c' }, cursor: 'pointer', fontSize: isMobile ? '1rem' : '1.2rem', fontFamily: 'aeonik', color: '#f8f8f8' }}>Webflow Development</Typography>
                                 </MenuItem>
                                 <MenuItem disableGutters>
-                                    <Typography sx={{ width: '100%', px: 2, py: 2, m: 0, '&:hover': { border: '1px solid #fdc33c', color: '#fdc33c' }, cursor: 'pointer', fontSize: '1.2rem', fontFamily: 'aeonik', color: '#f8f8f8' }}>Webflow Enterprise</Typography>
+                                    <Typography sx={{ width: '100%', px: isMobile ? 1.5 : 2, py:isMobile ? 1.5 : 2, m: 0, '&:hover': { border: '1px solid #fdc33c', color: '#fdc33c' }, cursor: 'pointer', fontSize:isMobile ? '1rem' : '1.2rem', fontFamily: 'aeonik', color: '#f8f8f8' }}>Webflow Enterprise</Typography>
                                 </MenuItem>
                                 <MenuItem disableGutters>
-                                    <Typography sx={{ width: '100%', px: 2, py: 2, m: 0, '&:hover': { border: '1px solid #fdc33c', color: '#fdc33c' }, cursor: 'pointer', fontSize: '1.2rem', fontFamily: 'aeonik', color: '#f8f8f8' }}>Webflow E-commerce</Typography>
+                                    <Typography sx={{ width: '100%', px: isMobile ? 1.5 : 2, py:isMobile ? 1.5 : 2, m: 0, '&:hover': { border: '1px solid #fdc33c', color: '#fdc33c' }, cursor: 'pointer', fontSize:isMobile ? '1rem' : '1.2rem', fontFamily: 'aeonik', color: '#f8f8f8' }}>Webflow E-commerce</Typography>
                                 </MenuItem>
                                 <MenuItem disableGutters>
-                                    <Typography sx={{ width: '100%', px: 2, py: 2, m: 0, '&:hover': { border: '1px solid #fdc33c', color: '#fdc33c' }, cursor: 'pointer', fontSize: '1.2rem', fontFamily: 'aeonik', color: '#f8f8f8' }}>Webflow Maintenance</Typography>                            </MenuItem>
+                                    <Typography sx={{ width: '100%', px: isMobile ? 1.5 : 2, py:isMobile ? 1.5 : 2, m: 0, '&:hover': { border: '1px solid #fdc33c', color: '#fdc33c' }, cursor: 'pointer', fontSize:isMobile ? '1rem' : '1.2rem', fontFamily: 'aeonik', color: '#f8f8f8' }}>Webflow Maintenance</Typography>                            </MenuItem>
                                 <MenuItem disableGutters>
-                                    <Typography sx={{ width: '100%', px: 2, py: 2, m: 0, '&:hover': { border: '1px solid #fdc33c', color: '#fdc33c' }, cursor: 'pointer', fontSize: '1.2rem', fontFamily: 'aeonik', color: '#f8f8f8' }}>Webflow Training</Typography>
+                                    <Typography sx={{ width: '100%', px: isMobile ? 1.5 : 2, py:isMobile ? 1.5 : 2, m: 0, '&:hover': { border: '1px solid #fdc33c', color: '#fdc33c' }, cursor: 'pointer', fontSize:isMobile ? '1rem' : '1.2rem', fontFamily: 'aeonik', color: '#f8f8f8' }}>Webflow Training</Typography>
                                 </MenuItem>
                             </Box>
 

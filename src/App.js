@@ -7,6 +7,7 @@ import Accessories from './Component/Accessories/Accessories';
 import News from './Component/News/News';
 import InnerlandingPage from './Component/InnerLandingPage/InnerlandingPage';
 import Branding from './Component/Branding&WebDesign/Branding';
+import Webflow from './Component/WebflowWebsite/Webflow';
 
 
 
@@ -21,6 +22,7 @@ function App() {
           <Route path='/News' element={<News/>} />
           <Route path='/InnerLandingPage' element={<InnerlandingPage/>} />
           <Route path='/Branding' element={<Branding/>} />
+          <Route path='/WebflowWebsite' element={<Webflow/>} />
         </Routes>
       </BrowserRouter>
     </>

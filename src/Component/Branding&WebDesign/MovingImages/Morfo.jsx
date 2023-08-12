@@ -18,7 +18,7 @@ const Morfo = () => {
     return (
         <>
             <Box bgcolor={'#f1f1f1'} py={10} px={isMobile ? 2.5 : 6} mt={'-10rem'}>
-                <img src={morfoLogo} width={'265rem'} alt="" />
+                <img src={morfoLogo} width={isMobile ? '210rem' :'265rem'} alt="" />
                 <Box mt={7.5}>
                     <Typography sx={{ color: '#181818', fontSize:isMobile ? '2rem':'3.7rem', fontFamily: 'aeonik-reg',lineHeight:isMobile ? 'normal':'5rem' }}>"A top-notch team, from Thomas for the project structuring, to Pierre & Mérieux in the project deployment, to Florian for the Webflow development."</Typography>
                 </Box>

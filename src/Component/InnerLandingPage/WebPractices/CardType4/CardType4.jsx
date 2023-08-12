@@ -39,16 +39,6 @@ function CardType4() {
 
     return (
         <>
-                     {/* THROUGH MAP FUNCTION AND USNG ARRAY OF OBJECTS METHOD */}
-            
-            {/* <Grid container spacing={3} mt={5}>
-                {CardType4Data.map((data, index) => (
-                    <Grid key={index} item xs={12} sm={6} md={4} lg={3} >
-                        <CardStruct img={data.img} des={data.des} />
-                    </Grid>
-                ))}
-            </Grid> */}
-
 
             <Grid container spacing={6.5} mt={1.5}>
                 <Grid item mt={ isMobile ? 1 : 5} xs={12} sm={6}  md={4} lg={3}>
