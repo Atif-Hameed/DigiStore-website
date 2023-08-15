@@ -1,8 +1,7 @@
 import { Box, Button, Grid, Menu, MenuItem, Typography, useMediaQuery, useTheme } from '@mui/material'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import '../InnerLandingPage/index.css'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import figmaImg from '../../asset/figmaLogo.svg'
 import maintenanceImgBig from '../../asset/maintenanceImgBig.webp'
 import maintenanceImgSmall from '../../asset/maintenanceImgSmall.webp'
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
@@ -21,7 +20,7 @@ const Header = () => {
 
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    // const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
 
     return (
         <>

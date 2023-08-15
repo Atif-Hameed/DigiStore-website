@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 const Dialogue2 = () => {
 
     const theme = useTheme()
-    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    // const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
     return (

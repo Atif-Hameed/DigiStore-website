@@ -9,7 +9,7 @@ const StructCard = (props) => {
 
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    // const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
 
     return (
         <>
@@ -39,28 +39,28 @@ const DesignCard = () => {
 
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    // const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
 
     return (
         <>    
                 <Grid container spacing={isMobile ? 10 : 5}>
                     <Grid item lg={4} sm={12}>
                         <StructCard
-                            img={<img src={tickImg} width={isMobile ? '55rem':'100rem'} />}
+                            img={<img src={tickImg} alt='' width={isMobile ? '55rem':'100rem'} />}
                             heading='Experienced designers'
                             des='Web design has no secrets for us. Our designers work with you to design your graphic identity and branding.'
                         />
                     </Grid>
                     <Grid item lg={4} sm={12}>
                         <StructCard
-                            img={<img src={brushImg} width={isMobile ? '55rem':'100rem'} />}
+                            img={<img src={brushImg} alt='' width={isMobile ? '55rem':'100rem'} />}
                             heading='Innovative and creative web designs'
                             des='We combine our graphic expertise with our knowledge of web trends, to design unique interfaces and identities.'
                         />
                     </Grid>
                     <Grid item lg={4} sm={12}>
                         <StructCard
-                            img={<img src={groupImg} width={isMobile ? '55rem':'100rem'} />}
+                            img={<img src={groupImg} alt='' width={isMobile ? '55rem':'100rem'} />}
                             heading='Collaboration with your teams'
                             des='Our web agency transforms your vision into digital reality by promoting collaboration and communication throughout the project.'
                         />

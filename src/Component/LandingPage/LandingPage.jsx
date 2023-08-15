@@ -1,4 +1,4 @@
-import { Box, Button, Typography, styled, useMediaQuery, useTheme } from '@mui/material'
+import { Box, Typography, styled, useMediaQuery, useTheme } from '@mui/material'
 import React from 'react'
 import './index.css'
 import InfinitSlider from './InfinitSlider/InfinitSlider'

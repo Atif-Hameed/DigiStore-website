@@ -1,11 +1,7 @@
 import { Accordion, AccordionDetails, AccordionSummary, Box, Typography, useMediaQuery, useTheme } from '@mui/material'
 import React, { useState } from 'react'
-// import './QA.css'
 import '../index.css'
 import AddIcon from '@mui/icons-material/Add';
-import CloseIcon from '@mui/icons-material/Close';
-import { prettyFormat } from '@testing-library/react';
-import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 
 
 const AccordionStruct = (props) => {
@@ -18,7 +14,7 @@ const AccordionStruct = (props) => {
 
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    // const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
 
     return (
         <>
@@ -51,7 +47,7 @@ const StructQuestions = (props) => {
 
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    // const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
 
     return (
         <>

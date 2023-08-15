@@ -1,4 +1,4 @@
-import { Box, Divider, Grid, Typography, isMuiElement, useMediaQuery, useTheme } from '@mui/material'
+import { Box, Divider, Grid, Typography, useMediaQuery, useTheme } from '@mui/material'
 import React from 'react'
 import '../InnerLandingPage/index.css'
 import personImg1 from '../../asset/personImg1.webp'
@@ -12,7 +12,7 @@ import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 const Card = (props) => {
 
     const theme = useTheme()
-    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    // const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
     return (
@@ -50,7 +50,7 @@ const Card = (props) => {
 function TrainerTeam() {
 
     const theme = useTheme()
-    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    // const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
     return (

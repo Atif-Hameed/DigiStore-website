@@ -5,18 +5,14 @@ import morfoLogo from '../../asset/morfoLogo.svg'
 import person from '../../asset/person.webp'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import StructQuestions from '../InnerLandingPage/Q&A/StructQuestions'
-import Courses from '../InnerLandingPage/Courses/Courses'
-import ClickHere from '../Branding&WebDesign/ClickHere'
-// import MovingImages from './MovingImages'
-// import Agency360 from './Agency360'
-// import Collaborate from './Collaborate'
+
 
 
 const MorfoTaining = () => {
 
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    // const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
 
     return (
         <>

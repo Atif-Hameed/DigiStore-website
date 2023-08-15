@@ -2,11 +2,10 @@ import React from 'react'
 import '../index.css'
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import figmaSmall from '../../../asset/figmaSmall.svg'
-// import hands from '../../../asset/handsSvg.svg'
 import CarouselBig from './CarouselBig'
 import wSmall from '../../../asset/wSamll.svg'
 import boxSmall from '../../../asset/boxSmall.svg'
-import { Box, Typography, styled, useMediaQuery, useTheme } from '@mui/material'
+import { Box, Typography, useMediaQuery, useTheme } from '@mui/material'
 import './CarouselStyle.css'
 
 
@@ -14,7 +13,7 @@ const HeroSection = () => {
 
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('lg'))
-    const isTablet = useMediaQuery(theme.breakpoints.down('sm'))
+    // const isTablet = useMediaQuery(theme.breakpoints.down('sm'))
 
     return (
         <>

@@ -1,13 +1,11 @@
-import { Box, Button, Grid, Menu, MenuItem, Typography, useMediaQuery, useTheme } from '@mui/material'
-import React, { useEffect, useState } from 'react'
+import { Box, Button,Menu, MenuItem, Typography, useMediaQuery, useTheme } from '@mui/material'
+import React from 'react'
 import '../InnerLandingPage/index.css'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import ppIcon from '../../asset/PpIcon.svg'
 import BgDots from '../../asset/BgDots.svg'
 import EnterpriseBg from '../../asset/enterpriseBg.webp'
 import certifIcon from '../../asset/certifIconWhite.svg'
-import CheckIcon from '@mui/icons-material/Check';
 
 const Header = () => {
 
@@ -22,7 +20,7 @@ const Header = () => {
 
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    // const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
 
     return (
         <>

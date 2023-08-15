@@ -1,4 +1,4 @@
-import { Box, Button, Divider, Grid, Typography, styled, useMediaQuery, useTheme } from '@mui/material'
+import { Box, Divider, Typography, styled, useMediaQuery, useTheme } from '@mui/material'
 import React from 'react'
 import logo from '../../../asset/logo.svg'
 import '../index.css'

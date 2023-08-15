@@ -1,5 +1,4 @@
 import React from 'react'
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import { Box, Typography, useMediaQuery, useTheme } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import SvgImg1 from '../../asset/SvgEdited/EditSvg1.svg'
@@ -21,7 +20,7 @@ function WebflowAccordians() {
 
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    // const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
 
     return (
         <>
@@ -43,33 +42,33 @@ function WebflowAccordians() {
 
                 <Box mt={isMobile ? 6 : 12}>
                     <Accordians
-                        svgImg1={<img src={SvgImg1} width={'60rem'} />}
-                        svgImg2={<img src={SvgImg1Colored} width={'60rem'} />}
+                        svgImg1={<img src={SvgImg1} alt='' width={'60rem'} />}
+                        svgImg2={<img src={SvgImg1Colored} alt='' width={'60rem'} />}
                         mainHeading='Web model development'
                     />
                     <Accordians
-                        svgImg1={<img src={SvgImg2} width={'60rem'} />}
-                        svgImg2={<img src={SvgImg2Colored} width={'60rem'} />}
+                        svgImg1={<img src={SvgImg2} alt='' width={'60rem'} />}
+                        svgImg2={<img src={SvgImg2Colored} alt='' width={'60rem'} />}
                         mainHeading='Client-First Development'
                     />
                     <Accordians
-                        svgImg1={<img src={SvgImg3} width={'60rem'} />}
-                        svgImg2={<img src={SvgImg3Colored} width={'60rem'} />}
+                        svgImg1={<img src={SvgImg3} alt='' width={'60rem'} />}
+                        svgImg2={<img src={SvgImg3Colored} alt='' width={'60rem'} />}
                         mainHeading='SEO & Accessibility'
                     />
                     <Accordians
-                        svgImg1={<img src={SvgImg4} width={'60rem'} />}
-                        svgImg2={<img src={SvgImg4Colored} width={'60rem'} />}
+                        svgImg1={<img src={SvgImg4} alt='' width={'60rem'} />}
+                        svgImg2={<img src={SvgImg4Colored} alt='' width={'60rem'} />}
                         mainHeading='Technical Services'
                     />
                     <Accordians
-                        svgImg1={<img src={SvgImg5} width={'60rem'} />}
-                        svgImg2={<img src={SvgImg5Colored} width={'60rem'} />}
+                        svgImg1={<img src={SvgImg5} alt='' width={'60rem'} />}
+                        svgImg2={<img src={SvgImg5Colored} alt='' width={'60rem'} />}
                         mainHeading='Migration'
                     />
                     <Accordians
-                        svgImg1={<img src={SvgImg6} width={'60rem'} />}
-                        svgImg2={<img src={SvgImg6Colored} width={'60rem'} />}
+                        svgImg1={<img src={SvgImg6} alt='' width={'60rem'} />}
+                        svgImg2={<img src={SvgImg6Colored} alt='' width={'60rem'} />}
                         mainHeading='Training'
                     />
                 </Box>

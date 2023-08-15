@@ -1,15 +1,12 @@
 import { Box, Typography, useMediaQuery, useTheme } from '@mui/material'
 import React from 'react'
-import GoogleIcon from '../../../asset/GoogleIcon.svg'
-import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import CardType3 from './CardType3/CardType3'
-import CardType4 from './CardType4/CardType4';
 
 const StructWebPractices = (props) => {
 
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    // const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
 
     return (
         <>

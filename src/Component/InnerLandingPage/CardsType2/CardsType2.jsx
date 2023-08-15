@@ -2,7 +2,6 @@ import { Box, Divider, Grid, Typography, useMediaQuery, useTheme } from '@mui/ma
 import React from 'react'
 import '../index.css'
 import './Card.css'
-import capIcon from '../../../asset/capIcon.svg'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { CardData } from '../CardsType2/CardType2Data'
 
@@ -12,7 +11,7 @@ const CardStruct = (props) => {
 
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    // const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
 
     return (
         <>
@@ -53,7 +52,7 @@ const CardsType2 = () => {
 
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    // const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
 
     return (
         <>

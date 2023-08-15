@@ -1,5 +1,4 @@
 import React from 'react'
-import Slider from 'react-slick';
 import img1 from '../../../asset/slide1.jpg'
 import img2 from '../../../asset/slide2.jpg'
 import img3 from '../../../asset/slide3.jpg'
@@ -8,7 +7,7 @@ import '../index.css'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './Carousel.css'
-import { Box, Button, Typography, styled, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Typography, styled, useMediaQuery, useTheme } from '@mui/material';
 import Marquee from "react-fast-marquee";
 
 
@@ -58,7 +57,7 @@ const Card1 = () => {
     )
 }
 
-const Card2 = (props) => {
+const Card2 = () => {
 
     const theme = useTheme();
     const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
@@ -106,7 +105,7 @@ const Card2 = (props) => {
     )
 }
 
-const Card3 = (props) => {
+const Card3 = () => {
 
     const theme = useTheme();
     const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
@@ -148,7 +147,7 @@ const Card3 = (props) => {
     )
 }
 
-const Card4 = (props) => {
+const Card4 = () => {
 
     const theme = useTheme();
     const isTablet = useMediaQuery(theme.breakpoints.down('lg'))

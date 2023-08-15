@@ -8,11 +8,11 @@ function VideoBig() {
 
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    // const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
 
     return (
         <>
-            <Box width={'100%'} height={ isMobile ? '62vh':'100vh'}>
+            <Box sx={{cursor:'pointer'}} width={'100%'} height={ isMobile ? '62vh':'100vh'}>
                 <Box position={'relative'} sx={{
                     backgroundImage: `url(${BigVideo})`,
                     backgroundSize:'cover',

@@ -3,19 +3,16 @@ import React from 'react'
 import tradeBoxes from '../../asset/tradeBoxes.svg'
 import brushImg from '../../asset/brushImg.svg'
 import groupImg from '../../asset/groupImg.svg'
-import tradeArrow from '../../asset/tradeArrow.svg'
 import '../InnerLandingPage/index.css'
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
-import RealizationCard from '../WebflowWebsite/RealizationCards';
-import certImg from '../../asset/certifIcon.svg'
-import wImg from '../../asset/webflowW.svg'
+
 
 
 const StructCard = (props) => {
 
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    // const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
 
     return (
         <>
@@ -46,7 +43,7 @@ const Plateforms = () => {
 
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    // const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
 
     return (
         <>
@@ -67,21 +64,21 @@ const Plateforms = () => {
                     <Grid container spacing={isMobile ? 10 : 5}>
                         <Grid item lg={4} sm={12}>
                             <StructCard
-                                img={<img src={brushImg} width={isMobile ? '55rem' : '100rem'} />}
+                                img={<img src={brushImg} alt='' width={isMobile ? '55rem' : '100rem'} />}
                                 heading='Customized design'
                                 des='A custom-made Webflow site, adapted to your specific needs and unique brand identity'
                             />
                         </Grid>
                         <Grid item lg={4} sm={12}>
                             <StructCard
-                                img={<img src={tradeBoxes} width={isMobile ? '55rem' : '100rem'} />}
+                                img={<img src={tradeBoxes} alt='' width={isMobile ? '55rem' : '100rem'} />}
                                 heading='A scalable webflow CMS'
                                 des='For simplified management and optimal flexibility of your online content.'
                             />
                         </Grid>
                         <Grid item lg={4} sm={12}>
                             <StructCard
-                                img={<img src={groupImg} width={isMobile ? '55rem' : '100rem'} />}
+                                img={<img src={groupImg} alt='' width={isMobile ? '55rem' : '100rem'} />}
                                 heading='Training for your teams.'
                                 des='Train your teams with our personalized sessions, for an optimal mastery of Webflow.'
                             />

@@ -9,13 +9,12 @@ import oteriaCyberIcon from '../../../../asset/oteriaCyberIcon.svg'
 import droopleIcon from '../../../../asset/droopleIcon.svg'
 import greenly from '../../../../asset/greenlyIcon.svg'
 import '../../index.css'
-import { CardType4Data } from './CardType4Data'
 
 const CardStruct = (props) => {
 
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    // const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
 
     return (
         <>
@@ -35,7 +34,7 @@ function CardType4() {
 
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    // const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
 
     return (
         <>

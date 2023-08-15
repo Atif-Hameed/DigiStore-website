@@ -1,10 +1,8 @@
 import React from 'react'
-import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import { Box, Typography, useMediaQuery, useTheme } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import SvgImg1 from '../../asset/SvgEdited/WEditSvg.svg'
 import SvgImg1Colored from '../../asset/SvgEdited/WEditSvgColored.svg'
-
 import Accordians from '../Branding&WebDesign/Services/Accordians'
 import NextLvlBox from '../Branding&WebDesign/Services/NextLvlBox';
 
@@ -13,7 +11,7 @@ function EnterpriseAccordian() {
 
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    // const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
 
     return (
         <>
@@ -37,23 +35,23 @@ function EnterpriseAccordian() {
 
                 <Box mt={isMobile ? 3.5 : 12}>
                     <Accordians
-                        svgImg1={<img src={SvgImg1} width={'60rem'} />}
-                        svgImg2={<img src={SvgImg1Colored} width={'60rem'} />}
+                        svgImg1={<img src={SvgImg1} alt='' width={'60rem'} />}
+                        svgImg2={<img src={SvgImg1Colored} alt='' width={'60rem'} />}
                         mainHeading='Customized design'
                     />
                     <Accordians
-                        svgImg1={<img src={SvgImg1} width={'60rem'} />}
-                        svgImg2={<img src={SvgImg1Colored} width={'60rem'} />}
+                        svgImg1={<img src={SvgImg1} alt='' width={'60rem'} />}
+                        svgImg2={<img src={SvgImg1Colored} alt='' width={'60rem'} />}
                         mainHeading='Technically impeccable'
                     />
                     <Accordians
-                        svgImg1={<img src={SvgImg1} width={'60rem'} />}
-                        svgImg2={<img src={SvgImg1Colored} width={'60rem'} />}
+                        svgImg1={<img src={SvgImg1} alt='' width={'60rem'} />}
+                        svgImg2={<img src={SvgImg1Colored} alt='' width={'60rem'} />}
                         mainHeading='Support and maintenance'
                     />
                     <Accordians
-                        svgImg1={<img src={SvgImg1} width={'60rem'} />}
-                        svgImg2={<img src={SvgImg1Colored} width={'60rem'} />}
+                        svgImg1={<img src={SvgImg1} alt='' width={'60rem'} />}
+                        svgImg2={<img src={SvgImg1Colored} alt='' width={'60rem'} />}
                         mainHeading='Customized training'
                     />
 

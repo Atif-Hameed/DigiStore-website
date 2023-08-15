@@ -1,4 +1,4 @@
-import { Box, Grid, Typography, useMediaQuery, useTheme } from '@mui/material'
+import { Box,Typography, useMediaQuery, useTheme } from '@mui/material'
 import React from 'react'
 import InnerNavbar from '../InnerLandingPage/InnerNavbar/InnerNavbar'
 import StructLogos from '../InnerLandingPage/PortfolioLogos/StructLogos'
@@ -10,11 +10,8 @@ import Footer from '../InnerLandingPage/Footer/Footer'
 import StructQuestions from '../InnerLandingPage/Q&A/StructQuestions'
 import Header from './Header'
 import Desgins from './Desgins'
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import StructServices from './Services/StructServices'
 import BrandingServices from './Services/BrandingServices'
 import Morfo from './MovingImages/Morfo'
-import MovingImages from './MovingImages/MovingImages'
 import ClickHere from './ClickHere'
 import NextLvlBox from './Services/NextLvlBox'
 
@@ -23,7 +20,7 @@ const Branding = () => {
 
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    // const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
 
     return (
         <>

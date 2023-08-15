@@ -21,7 +21,6 @@ import logo17 from '../../asset/logo17.svg'
 import logo18 from '../../asset/logo18.svg'
 import logo19 from '../../asset/logo19.svg'
 import logo20 from '../../asset/logo20.svg'
-import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 
 
 const StyledBox = styled(Box)({
@@ -41,7 +40,7 @@ const TrainingLogos = (props) => {
 
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    // const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
 
 
     return (

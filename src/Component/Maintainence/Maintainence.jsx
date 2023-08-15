@@ -6,7 +6,6 @@ import HoursUse from './HoursUse'
 import Courses from '../InnerLandingPage/Courses/Courses'
 import StructWebPractices from '../InnerLandingPage/WebPractices/StructWebPractices'
 import Morfo from '../Branding&WebDesign/MovingImages/Morfo'
-import WebPractices from '../InnerLandingPage/WebPractices/WebPractices'
 import NextLvlBox from '../Branding&WebDesign/Services/NextLvlBox'
 import StructQuestions from '../InnerLandingPage/Q&A/StructQuestions'
 import ClickHere from '../Branding&WebDesign/ClickHere'
@@ -17,7 +16,7 @@ function Maintainence() {
 
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    // const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
 
     return (
         <>

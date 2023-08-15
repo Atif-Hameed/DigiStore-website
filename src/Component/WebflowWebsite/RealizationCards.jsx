@@ -9,7 +9,7 @@ const StructCard = (props) => {
 
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    // const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
 
     return (
         <>
@@ -39,28 +39,28 @@ const RealizationCard = () => {
 
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    // const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
 
     return (
         <>    
                 <Grid container spacing={isMobile ? 10 : 5}>
                     <Grid item lg={4} sm={12}>
                         <StructCard
-                            img={<img src={brushImg} width={isMobile ? '55rem':'100rem'} />}
+                            img={<img src={brushImg} alt='' width={isMobile ? '55rem':'100rem'} />}
                             heading='100% Customized'
                             des='The sites we develop are unique, adapted to your activity and manageable by your teams.'
                         />
                     </Grid>
                     <Grid item lg={4} sm={12}>
                         <StructCard
-                            img={<img src={tradeArrow} width={isMobile ? '55rem':'100rem'} />}
+                            img={<img src={tradeArrow} alt='' width={isMobile ? '55rem':'100rem'} />}
                             heading='100% Optimized'
                             des='We propose websites that respect the best web practices for a good natural referencing.'
                         />
                     </Grid>
                     <Grid item lg={4} sm={12}>
                         <StructCard
-                            img={<img src={tradeBoxes} width={isMobile ? '55rem':'100rem'} />}
+                            img={<img src={tradeBoxes} alt='' width={isMobile ? '55rem':'100rem'} />}
                             heading='100% Scalable'
                             des='The creation of website, with our web agency, aims to scale your business and find new customers.'
                         />

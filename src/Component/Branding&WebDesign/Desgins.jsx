@@ -1,18 +1,17 @@
 import React from 'react'
 import DesignbigImg from '../../asset/designBigImg.webp'
 import DesignColor from '../../asset/designColorImg.webp'
-import { Box, Grid, Typography, useMediaQuery, useTheme } from '@mui/material'
+import { Box, Typography, useMediaQuery, useTheme } from '@mui/material'
 import '../InnerLandingPage/index.css'
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import DesignCard from './DesignCards'
-import { Link } from 'react-router-dom'
 
 
 const Desgins = () => {
 
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    // const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
 
     return (
         <>

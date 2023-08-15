@@ -1,4 +1,4 @@
-import { Box, Typography, styled, useMediaQuery, useTheme } from '@mui/material'
+import { Box, Typography,useMediaQuery, useTheme } from '@mui/material'
 import React from 'react'
 import '../index.css'
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
@@ -10,7 +10,7 @@ const PortfolioLogos = () => {
 
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    // const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
 
 
     return (

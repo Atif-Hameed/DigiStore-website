@@ -1,7 +1,6 @@
-import { Accordion, AccordionDetails, AccordionSummary, Box, Grid, Typography, useMediaQuery, useTheme } from '@mui/material'
+import {Box, Typography, useMediaQuery, useTheme } from '@mui/material'
 import React from 'react'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { useState } from 'react';
 import SvgImg1 from '../../../asset/SvgEdited/EditSvg1.svg'
 import SvgImg1Colored from '../../../asset/SvgEdited/EditSvg1Colored.svg'
 import SvgImg2 from '../../../asset/SvgEdited/EditSvg2.svg'
@@ -22,7 +21,7 @@ const StructServices = (props) => {
 
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    // const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
 
     return (
         <>
@@ -44,33 +43,33 @@ const StructServices = (props) => {
 
                 <Box mt={isMobile ? 6: 12}>
                     <Accordians
-                        svgImg1={<img src={SvgImg1} width={'60rem'} />}
-                        svgImg2={<img src={SvgImg1Colored} width={'60rem'} />}
+                        svgImg1={<img src={SvgImg1} alt='' width={'60rem'} />}
+                        svgImg2={<img src={SvgImg1Colored} alt='' width={'60rem'} />}
                         mainHeading='Sprint Design'
                     />
                     <Accordians
-                        svgImg1={<img src={SvgImg2} width={'60rem'} />}
-                        svgImg2={<img src={SvgImg2Colored} width={'60rem'} />}
+                        svgImg1={<img src={SvgImg2} alt='' width={'60rem'} />}
+                        svgImg2={<img src={SvgImg2Colored} alt='' width={'60rem'} />}
                         mainHeading='Corporate identity'
                     />
                     <Accordians
-                        svgImg1={<img src={SvgImg3} width={'60rem'} />}
-                        svgImg2={<img src={SvgImg3Colored} width={'60rem'} />}
+                        svgImg1={<img src={SvgImg3} alt='' width={'60rem'} />}
+                        svgImg2={<img src={SvgImg3Colored} alt='' width={'60rem'} />}
                         mainHeading='Wireframing / UX'
                     />
                     <Accordians
-                        svgImg1={<img src={SvgImg4} width={'60rem'} />}
-                        svgImg2={<img src={SvgImg4Colored} width={'60rem'} />}
+                        svgImg1={<img src={SvgImg4} alt='' width={'60rem'} />}
+                        svgImg2={<img src={SvgImg4Colored} alt='' width={'60rem'} />}
                         mainHeading='Prototyping / UI'
                     />
                     <Accordians
-                        svgImg1={<img src={SvgImg5} width={'60rem'} />}
-                        svgImg2={<img src={SvgImg5Colored} width={'60rem'} />}
+                        svgImg1={<img src={SvgImg5} alt='' width={'60rem'} />}
+                        svgImg2={<img src={SvgImg5Colored} alt='' width={'60rem'} />}
                         mainHeading='Design System'
                     />
                     <Accordians
-                        svgImg1={<img src={SvgImg6} width={'60rem'} />}
-                        svgImg2={<img src={SvgImg6Colored} width={'60rem'} />}
+                        svgImg1={<img src={SvgImg6} alt='' width={'60rem'} />}
+                        svgImg2={<img src={SvgImg6Colored} alt='' width={'60rem'} />}
                         mainHeading='Component library'
                     />
                 </Box>

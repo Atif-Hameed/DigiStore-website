@@ -1,4 +1,4 @@
-import { Box, Divider, Grid, Typography, useMediaQuery, useTheme } from '@mui/material'
+import { Box,Grid, Typography, useMediaQuery, useTheme } from '@mui/material'
 import React from 'react'
 import '../../index.css'
 import './Card.css'
@@ -10,7 +10,7 @@ const CardStruct = (props) => {
 
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    // const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
 
     return (
         <>
@@ -51,7 +51,7 @@ function CardType3() {
 
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
-    const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
+    // const isTablet = useMediaQuery(theme.breakpoints.down('lg'))
 
     return (
         <>
