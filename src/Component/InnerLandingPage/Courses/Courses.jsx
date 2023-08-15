@@ -42,7 +42,7 @@ const Courses = () => {
                         </Box>
                     </Grid>
                     <Grid item xs={12} sm={6} lg={6}>
-                        <Box>
+                        <Box sx={{cursor:'pointer', '&:hover':{border:'1px solid #fdd33c'}}}>
                             <Box >
                                 <Typography sx={{ fontFamily: 'aeonik-reg', color: '#838383', fontSize:isMobile ? '1rem' : '1.3rem', mb: 1 }} >TOP TUTO WEBFLOW</Typography>
                                 <Divider sx={{ backgroundColor: '#838383', }} />

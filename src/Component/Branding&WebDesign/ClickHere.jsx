@@ -16,7 +16,7 @@ function ClickHere() {
                 <Box sx={{display:'flex', alignItems:'center',gap:3, flexDirection:'column', justifyContent:'center'}}>
                    
                     <Typography sx={{ textAlign: 'center', fontFamily: 'aeonik', 
-                    color: '#fff',lineHeight:isMobile ? 'normal':'6.5rem', cursor: 'pointer', fontSize:isMobile ? '2.5rem' : '4.9rem', width: '60%',
+                    color: '#fff',lineHeight:isMobile ? 'normal':'6.5rem', cursor: 'pointer', fontSize:isMobile ? '2.5rem' : '4.9rem', width:isMobile ? '90%' : '60%',
                     background:'linear-gradient(#fff,rgba(255,255,255,.4))',WebkitBackgroundClip:'text',WebkitTextFillColor:'transparent',
                      }}>
                         You are one click away from making the best decision for your site.

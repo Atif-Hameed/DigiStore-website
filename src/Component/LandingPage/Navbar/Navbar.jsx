@@ -133,7 +133,7 @@ const Navbar = () => {
                                 <Box component={'img'} src={Icon} sx={{ width: isTablet ? '0.9rem' : '1.2rem' }} />
                             </Box>
 
-                            <Link style={{ textDecoration: 'none' }} to="/InnerLandingPage">
+                            <Link style={{ textDecoration: 'none' }} to="/InnerLandingPage" target='_blank'>
                                 <Box sx={{ display: 'flex', alignItems: 'center', gap: '0.5rem', backgroundColor: '#fdd33c', pl: isMobile ? '6px' : '8px', pr: '2px', py: '6px' }}>
                                     <Button disableElevation variant='contained' sx={{ fontFamily: 'aeonik-reg', backgroundColor: '#fff', color: '#000', fontWeight: '500', fontSize: isMobile ? '0.8rem' : isTablet ? '1rem' : '1.4rem', pl: isMobile ? '4px' : '8px', py: isMobile ? '4px' : '6px', borderRadius: '7px' }}>AGENCY</Button>
                                     <ArrowOutwardIcon sx={{ color: '#000', fontSize: isTablet ? '20px' : '28px' }} />

@@ -55,11 +55,6 @@ function CardType3() {
 
     return (
         <>
-            {/* <Box sx={{ mt: 14, mb: 30, display: 'flex', alignItems: 'center', gap: 5 }}>
-                {CardType3Data.map((data, index) => (
-                    <CardStruct key={index} img={data.img} name={data.name} des={data.des} />
-                ))}
-            </Box> */}
 
             <Grid container spacing={5} sx={{ mt: isMobile ? 1 : 8, mb: isMobile ? 15 : 30 }} >
                 {CardType3Data.map((data, index) => (

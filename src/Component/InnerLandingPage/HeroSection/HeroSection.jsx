@@ -19,24 +19,24 @@ const HeroSection = () => {
     return (
         <>
             <Box className="bgHands" sx={{width: '100%', mt: 12.5, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-                <Box sx={{ mt:isMobile ? 17.5 : 14.3,px:isMobile? 2.5 : 'normal', display: 'flex', flexDirection: 'column', alignItems: 'center', gap:isMobile ? 27 : 19 }}>
+                <Box sx={{ mt:isMobile ? 17.5 : 14.3,px:isMobile? 2.5 : 'normal', display: 'flex', flexDirection: 'column', alignItems: 'center', gap:isMobile ? 27 : 19.5 }}>
 
-                    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: isMobile ? 'start' : 'center', gap:isMobile ? 4 : 5 }}>
+                    <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: isMobile ? 'start' : 'center', gap:isMobile ? 4 : 5.3 }}>
                         <Box>
                             <Typography sx={{ fontFamily: 'aeonik', textAlign:isMobile? 'start' : 'center', color: '#fff', fontSize: isMobile ? '2.45rem' : '4.9rem', lineHeight: isMobile ? '3.2rem' : '6.4rem' }}>Let's create your</Typography>
                             <Typography sx={{ fontFamily: 'aeonik', color: '#fff', fontSize: isMobile ? '2.45rem' : '4.9rem', lineHeight: isMobile ? '3.2rem' : '6.4rem' }}>website together.</Typography>
                         </Box>
                         <Box sx={{ display: 'flex', alignItems: 'center', gap:isMobile ? 2.8 : 4, flexWrap: 'wrap' }}>
-                            <Box sx={{ display: 'flex', alignItems: 'center', gap:isMobile ? 1.3 : 1.8 }}>
-                                <Typography sx={{ fontFamily: 'aeonik', color: '#fff', fontSize:isMobile ? '1.15rem' : '1.34rem' }}>Services</Typography>
+                            <Box sx={{cursor:'pointer', '&:hover':{'.text2':{textDecoration:'underline'}}, display: 'flex', alignItems: 'center', gap:isMobile ? 1.3 : 1.8 }}>
+                                <Typography className='text1' sx={{ fontFamily: 'aeonik', color: '#fff', fontSize:isMobile ? '1.15rem' : '1.38rem' }}>Services</Typography>
                                 <ArrowOutwardIcon sx={{ color: '#fdd33c', fontSize:isMobile? '28px' : '35px' }} />
                             </Box>
-                            <Box sx={{ display: 'flex', alignItems: 'center', gap:isMobile ? 1.3 : 1.8 }}>
-                                <Typography sx={{ fontFamily: 'aeonik', color: '#fff', fontSize:isMobile ? '1.15rem' : '1.34rem' }}>Portoflio</Typography>
+                            <Box sx={{cursor:'pointer', '&:hover':{'.text2':{textDecoration:'underline'}}, display: 'flex', alignItems: 'center', gap:isMobile ? 1.3 : 1.8 }}>
+                                <Typography className='text1' sx={{ fontFamily: 'aeonik', color: '#fff', fontSize:isMobile ? '1.15rem' : '1.38rem' }}>Portoflio</Typography>
                                 <ArrowOutwardIcon sx={{ color: '#fdd33c', fontSize:isMobile? '28px' : '35px' }} />
                             </Box>
-                            <Box sx={{mt:isMobile ? 1 : 'normal', display: 'flex', alignItems: 'center', gap:isMobile ? 1.3 : 1.8    }}>
-                                <Typography sx={{ fontFamily: 'aeonik', color: '#fff', fontSize:isMobile ? '1.15rem' : '1.34rem' }}>Contact</Typography>
+                            <Box sx={{cursor:'pointer', '&:hover':{'.text3':{textDecoration:'underline'}}, mt:isMobile ? 1 : 'normal', display: 'flex', alignItems: 'center', gap:isMobile ? 1.3 : 1.8    }}>
+                                <Typography className='text3' sx={{ fontFamily: 'aeonik', color: '#fff', fontSize:isMobile ? '1.15rem' : '1.38rem' }}>Contact</Typography>
                                 <ArrowOutwardIcon sx={{ color: '#fdd33c', fontSize:isMobile? '28px' : '35px' }} />
                             </Box>
                         </Box>

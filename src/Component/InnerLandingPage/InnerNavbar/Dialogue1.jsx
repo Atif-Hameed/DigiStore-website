@@ -30,15 +30,15 @@ const Dialogue1 = () => {
                                 <Typography sx={{ "&:hover": { textDecoration: 'underline', color: '#fdd33c' }, color: '#f8f8f8', fontSize: isMobile ? '1.2rem' : '1.9rem', fontFamily: 'aeonik-reg', fontWeight: '500' }}>WEBFLOW WEBSITE</Typography>
                             </Link>
 
-                            <Link to="" style={{ textDecoration: 'none' }}>
+                            <Link to="/Training" style={{ textDecoration: 'none' }}>
                                 <Typography sx={{ "&:hover": { textDecoration: 'underline', color: '#fdd33c' }, color: '#f8f8f8', fontSize: isMobile ? '1.2rem' : '1.9rem', fontFamily: 'aeonik-reg', fontWeight: '500' }}>TRAINING</Typography>
                             </Link>
 
-                            <Link to="" style={{ textDecoration: 'none' }}>
+                            <Link to="/Maintainence" style={{ textDecoration: 'none' }}>
                                 <Typography sx={{ "&:hover": { textDecoration: 'underline', color: '#fdd33c' }, color: '#f8f8f8', fontSize: isMobile ? '1.2rem' : '1.9rem', fontFamily: 'aeonik-reg', fontWeight: '500' }}>MAINTENANCE</Typography>
                             </Link>
 
-                            <Link to="" style={{ textDecoration: 'none' }}>
+                            <Link to="/Enterprise" style={{ textDecoration: 'none' }}>
                                 <Typography sx={{ "&:hover": { textDecoration: 'underline', color: '#fdd33c' }, color: '#f8f8f8', fontSize: isMobile ? '1.2rem' : '1.9rem', fontFamily: 'aeonik-reg', fontWeight: '500' }}>ENTERPRISE</Typography>
                             </Link>
 

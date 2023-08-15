@@ -351,8 +351,9 @@ const InnerNavbar = () => {
                             </Button>
                         </Box>
 
-                        <Button sx={{ mb: isMobile ? 1 : 'normal', color: '#fff', fontSize: isMobile ? '0.9rem' : '1.06rem', fontFamily: 'aeonik-reg', fontWeight: 'bold' }}>
+                        <Button sx={{display:'flex', flexDirection:'column', cursor:'pointer', '&:hover':{'.fr':{opacity:1}}, mb: isMobile ? 1 : 'normal', color: '#fff', fontSize: isMobile ? '0.9rem' : '1.06rem', fontFamily: 'aeonik-reg', fontWeight: 'bold' }}>
                             EN
+                            <Typography className='fr' sx={{bgcolor:'#101010', position:'absolute', top:45, opacity:0, py:1, px:2, color: '#fff', fontSize: isMobile ? '0.9rem' : '1.06rem', fontFamily: 'aeonik-reg', fontWeight: 'bold'}}>FR</Typography>
                         </Button>
 
                         <IconButton onClick={handleDrawer} sx={{ display: isMobile ? 'initial' : 'none' }} >

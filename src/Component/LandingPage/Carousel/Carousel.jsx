@@ -36,7 +36,7 @@ const Card1 = () => {
     return (
         <>
             <Box sx={{ position: 'relative' }}>
-                <img style={{ height: isMobile ? '50vh' : '70vh', width: isMobile ? '85vw' : isTablet ? '40vw' : '30vw' }} src={img1} alt="" />
+                <img style={{ height: isMobile ? '50vh' : '70vh', width: isMobile ? '85vw' : isTablet ? '40vw' : '33vw' }} src={img1} alt="" />
 
                 <Box sx={{ position: 'absolute', top: isTablet ? '2rem' : '4rem', left: 0, }}>
 
@@ -82,7 +82,7 @@ const Card2 = (props) => {
     return (
         <>
             <Box sx={{ position: 'relative' }}>
-                <img style={{ height: isMobile ? '50vh' : '70vh', width: isMobile ? '85vw' : isTablet ? '40vw' : '30vw' }} src={img2} alt="" />
+                <img style={{ height: isMobile ? '50vh' : '70vh', width: isMobile ? '85vw' : isTablet ? '40vw' : '33vw' }} src={img2} alt="" />
 
                 <Box sx={{ position: 'absolute', bottom: '10rem', left: 0, }}>
 
@@ -130,7 +130,7 @@ const Card3 = (props) => {
     return (
         <>
             <Box sx={{ position: 'relative' }}>
-                <img style={{ height: isMobile ? '50vh' : '70vh', width: isMobile ? '85vw' : isTablet ? '40vw' : '30vw' }} src={img3} alt="" />
+                <img style={{ height: isMobile ? '50vh' : '70vh', width: isMobile ? '85vw' : isTablet ? '40vw' : '33vw' }} src={img3} alt="" />
 
                 <Box style={{ position: 'absolute', bottom: isTablet ? '8rem' : '13rem', left: '20%', }}>
                     <Box sx={{ backgroundColor: '#fff', color: '#000', width: 'fit-content' }}>
@@ -171,7 +171,7 @@ const Card4 = (props) => {
 
     return (
         <>
-            <div style={{ width: isMobile ? '85vw' : isTablet ? '40vw' : '30vw', height: isMobile ? '50vh' : '70vh', backgroundColor: '#f1f1f1' }}>
+            <div style={{ width: isMobile ? '85vw' : isTablet ? '40vw' : '33vw', height: isMobile ? '50vh' : '70vh', backgroundColor: '#f1f1f1' }}>
                 <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%', flexDirection: 'column', gap: "2rem" }}>
 
                     <Box sx={{ backgroundColor: '#fff', color: '#000', mx: 'auto', textAlign: 'center', width: 'fit-content' }}>

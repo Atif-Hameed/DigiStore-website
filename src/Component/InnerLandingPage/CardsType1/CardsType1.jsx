@@ -16,7 +16,7 @@ const Card1 = () => {
 
     return (
         <>
-            <Box sx={{ cursor: 'pointer', bgcolor: '#181818', pl: isMobile ? 3 : 10, pr: isMobile ? 3 : 7.5, py: isMobile ? 1 : 13, pt:isMobile ? 3 : 'normal', display: 'flex', flexDirection: 'column', gap:isMobile ? 3 : 5 }} >
+            <Box sx={{ cursor: 'pointer', bgcolor: '#181818', pl: isMobile ? 3 : 10, pr: isMobile ? 3 : 7.5, py: isMobile ? 1 : 13, pt:isMobile ? 3 : 12, display: 'flex', flexDirection: 'column', gap:isMobile ? 3 : 5 }} >
                 <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                     <img src={figmaLogo} width={isMobile ? '38rem' : '67rem'} alt="" />
                     <Box sx={{ bgcolor: '#222', width: 'fit-content', py: 0.8, px: 1.3 }}>
@@ -45,7 +45,7 @@ const Card2 = () => {
 
     return (
         <>
-            <Box sx={{ cursor: 'pointer', bgcolor: '#181818', pl:isMobile ? 3 : 10, pr: isMobile ? 3 : 7.5, py: isMobile ? 1 : 13, pt:isMobile ? 3 : 'normal', display: 'flex', flexDirection: 'column', gap:isMobile ? 3 : 5 }} >
+            <Box sx={{ cursor: 'pointer', bgcolor: '#181818', pl:isMobile ? 3 : 10, pr: isMobile ? 3 : 7.5, py: isMobile ? 1 : 13, pt:isMobile ? 3 : 12, display: 'flex', flexDirection: 'column', gap:isMobile ? 3 : 5 }} >
                 <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                     <img src={WLogo} width={isMobile ? '60rem' : '100rem'} alt="" />
                     <Box sx={{ bgcolor: '#222', width: 'fit-content', py: 0.8, px: 1.3 }}>
